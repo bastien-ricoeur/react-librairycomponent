@@ -11,7 +11,7 @@ import '../src/style/base.css';
 const basicTheme = create({
   base: 'light',
   brandTitle: 'Bastien Ricoeur - React Library Component',
-  brandUrl: 'https://github.com/bastien-ricoeur/react-librairycomponent',
+  brandUrl: 'https://github.com/bastien-ricoeur/react-librarycomponent',
   brandImage: null
 });
 
