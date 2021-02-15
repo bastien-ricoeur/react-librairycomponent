@@ -8,4 +8,7 @@ stories.add("Presentation", () => (<span></span>), {
   readme: {
     content: README
   },
+  options: {
+    showPanel: false,
+  }
 });

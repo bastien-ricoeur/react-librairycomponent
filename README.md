@@ -44,5 +44,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 
-## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## 📚 License
+[![License: MIT](https://img.shields.io/badge/Licence-MIT-yellow?logo=github)](https://opensource.org/licenses/MIT)
