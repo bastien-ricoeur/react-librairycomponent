@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": false,
   "main": "lib/src/index.js",
+  "license": "MIT",
   "directories": {
     "lib": "lib"
   },
