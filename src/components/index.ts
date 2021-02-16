@@ -1,2 +1,3 @@
 export { default as Button } from './button';
 export { default as ButtonWithIcon } from './button-withicon';
+export { default as CustomSelect } from './select';

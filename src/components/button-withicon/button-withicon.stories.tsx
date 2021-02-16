@@ -29,7 +29,7 @@ stories.add(
           { BasketBall: 'BasketBall', Ski: 'Ski' },
           'BasketBall'
         )}
-        onClick={hasOnClick ? action('clicked') : undefined}
+        onClick={hasOnClick ? action('onClick') : undefined}
         color={color('Custom color', '')}
         disabled={boolean('Disabled', false)}
       >
