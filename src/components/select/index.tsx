@@ -11,10 +11,17 @@ export type CustomSelectProps = {
   onChange?: (value: any, event: any) => void;
 };
 
-const CustomSelect: React.FC<CustomSelectProps> = (props: CustomSelectProps) => {
+const CustomSelect: React.FC<CustomSelectProps> = (
+  props: CustomSelectProps
+) => {
   const { options, value, isClearable, onChange } = props;
   return (
-    <Select value={value} isClearable={isClearable} options={options} onChange={onChange} />
+    <Select
+      value={value}
+      isClearable={isClearable}
+      options={options}
+      onChange={onChange}
+    />
   );
 };
 
