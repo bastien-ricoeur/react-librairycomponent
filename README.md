@@ -10,7 +10,7 @@
 </p>
 
 A React Component Librairy which offer you a few nice components for your website.
-
+This library uses [react-select](https://react-select.com) and [react-icons](https://react-icons.github.io/react-icons) librairies.
 
 ## 🔧 Installation
 
