@@ -38,7 +38,7 @@
   },
   "scripts": {
     "start": "npm run lint:fix && start-storybook -p 9009 -s public",
-    "test": "react-scripts test --watchAll=false",
+    "test": "react-scripts test",
     "lint": "eslint ./src/**/*.{js,jsx,ts,tsx}",
     "lint:fix": "eslint --fix ./src/**/*.{js,jsx,ts,tsx}",
     "build-storybook": "build-storybook",

@@ -8,7 +8,7 @@ export type CustomSelectProps = {
   }[];
   isClearable?: boolean;
   value?: any;
-  onChange?: (value: any, event: any) => void;
+  onChange?: (_value: any, _event: any) => void;
 };
 
 const CustomSelect: React.FC<CustomSelectProps> = (

@@ -10,7 +10,7 @@ import {
 
 export type WeatherSelectProps = {
   isClearable?: boolean;
-  onChange?: (value: any, event: any) => void;
+  onChange?: (_value: any, _event: any) => void;
 };
 
 const WeatherSelect: React.FC<WeatherSelectProps> = (
