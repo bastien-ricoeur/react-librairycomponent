@@ -16,7 +16,7 @@ export type WeatherSelectProps = {
 const WeatherSelect: React.FC<WeatherSelectProps> = (
   props: WeatherSelectProps
 ) => {
-  const { isClearable, onChange } = props;
+  const { isClearable, onChange } = props
   const { Option } = components;
 
   const customSingleValue = (props) => (
