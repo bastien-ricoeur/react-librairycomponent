@@ -20,7 +20,7 @@ const GitlabUsersSelect: FC<GitlabUsersSelectProps> = (
   const [options, setOptions] = useState([]);
 
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading(true)
     setIsError(false);
 
     service
