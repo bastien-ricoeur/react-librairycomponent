@@ -13,7 +13,7 @@ export type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  onClick = () => { },
+  onClick = () => {},
   disabled = false,
   type = 'submit',
   color = '',
