@@ -43,6 +43,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+If you want to contribute to the library you need to realize this steps to use git hooks for cleaning and testing your code :
+* Copy the content of git-hooks folder into your .git/hooks folder
+* Copy the husky.sh file from the node_modules/husky/scripts to your .git/hooks folder
+
 
 ## 📚 License
 [![License: MIT](https://img.shields.io/badge/Licence-MIT-yellow?logo=github)](https://opensource.org/licenses/MIT)

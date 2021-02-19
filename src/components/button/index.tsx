@@ -13,7 +13,7 @@ export type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  onClick = () => {},
+  onClick = () => { },
   disabled = false,
   type = 'submit',
   color = '',
@@ -35,7 +35,6 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button {...rootProps}>
-      <span>Test</span>
       <span className={classes.label}>{children}</span>
     </button>
   );

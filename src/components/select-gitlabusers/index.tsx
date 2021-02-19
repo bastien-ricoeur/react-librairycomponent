@@ -15,7 +15,7 @@ const GitlabUsersSelect: React.FC<GitlabUsersSelectProps> = (
   const { gitLabUrl, privateToken, service, onChange } = props;
   const { Option } = components;
 
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [options, setOptions] = useState([]);
 

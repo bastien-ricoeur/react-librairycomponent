@@ -47,9 +47,6 @@ describe('Button', () => {
           data-testid="button"
           type="submit"
         >
-          <span>
-            Test
-          </span>
           <span
             class="label-0-2-2"
           >
@@ -71,9 +68,6 @@ describe('Button', () => {
           data-testid="button"
           type="reset"
         >
-          <span>
-            Test
-          </span>
           <span
             class="label-0-2-2"
           >
