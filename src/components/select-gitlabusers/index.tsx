@@ -21,7 +21,7 @@ const GitlabUsersSelect: FC<GitlabUsersSelectProps> = (
 
   useEffect(() => {
     setIsLoading(true)
-    setIsError(false);
+    setIsError(false)
 
     service
       .fetchUsers(gitLabUrl, privateToken)
