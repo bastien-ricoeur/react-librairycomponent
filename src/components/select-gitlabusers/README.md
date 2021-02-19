@@ -1,19 +1,23 @@
-# Weather select
+# GitlabUsers select
 
 <!-- STORY -->
 
 <hr>
 
-A component which allow people to select a weather in a list of options.
+A component which allow people to select a Gitlab user in a list of options.
+This component fetches the Gitlab API (v4).
 
 ##### Import
 
 ```js
-import { WeatherSelect } from '@bastienricoeur/components';
+import { GitlabUsersSelect } from '@bastienricoeur/components';
 ```
 
 ##### Usage
 
 ```jsx
-<WeatherSelect onChange={(value: any, event: any) => 'Handle the change'} />
+<GitlabUsersSelect 
+  service={service} 
+  gitLabUrl='https://gitlab.com'
+  privateToken='my_token' />
 ```

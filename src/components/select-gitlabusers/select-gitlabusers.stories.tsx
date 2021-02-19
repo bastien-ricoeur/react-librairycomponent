@@ -19,7 +19,7 @@ stories.add(
     return (
       <GitlabUsersSelect
         service={service}
-        gitLabUrl={text('Gitlab URL', 'https://gitlab.com/')}
+        gitLabUrl={text('Gitlab URL', 'https://gitlab.com')}
         privateToken={text('Private Gitlab token', 'my_token')}
         onChange={action('onChange')}
       />

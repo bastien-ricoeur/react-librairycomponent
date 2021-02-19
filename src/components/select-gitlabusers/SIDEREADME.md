@@ -1,13 +1,13 @@
 ##### Required props
 
-| Name       | Type    | Description                                 |
-| ---------- | ------- | ------------------------------------------- |
-| `options`  | `array` | `an array of objects like this one :`       |
-|            |         | `{'label': 'Option 1', 'value': 'option1'}` |
+| Name           | Type     | Description                                                                 |
+| -------------- | -------- | --------------------------------------------------------------------------- |
+| `service`      | `class`  | `a class which provides a fetchUsers method to get Gitlab users by the API` |
+| `gitLabUrl`    | `string` | `your Gitlab url (ex: https://gitlab.com)`                                  |
+| `privateToken` | `string` | `your private token from your Gitlab`                                       |
 
 ##### Optional props
 
-| Name          | Type       | Default                          | Description                             |
-| ------------- | ---------- | -------------------------------- | --------------------------------------- |
-| `isClearable` | `boolean`  | `false`                          |  `specify the icon (Basketball or Ski)` |
-| `onChange`    | `function` | `(value: any, event: any) => {}` |  `handle the option changes`            |
+| Name          | Type       | Default                          | Description                  |
+| ------------- | ---------- | -------------------------------- | ---------------------------- |
+| `onChange`    | `function` | `(value: any, event: any) => {}` |  `handle the option changes` |

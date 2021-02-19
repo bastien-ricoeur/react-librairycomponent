@@ -13,7 +13,7 @@ import README from './README.md';
 import SIDEREADME from './SIDEREADME.md';
 import ButtonWithIcon from '.';
 
-const stories = storiesOf('Buttons', module);
+const stories = storiesOf('Button', module);
 
 stories.addDecorator(withKnobs);
 
