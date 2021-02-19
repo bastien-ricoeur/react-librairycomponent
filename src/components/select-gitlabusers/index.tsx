@@ -1,4 +1,4 @@
-import React, { useEffect, FC, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Select, { components } from 'react-select';
 import { IGitlabService } from './service/gitlab-service.interface';
 
@@ -9,7 +9,7 @@ export type GitlabUsersSelectProps = {
   onChange?: (_value: any, _event: any) => void;
 };
 
-const GitlabUsersSelect: FC<GitlabUsersSelectProps> = (
+const GitlabUsersSelect: React.FC<GitlabUsersSelectProps> = (
   props: GitlabUsersSelectProps
 ) => {
   const { gitLabUrl, privateToken, service, onChange } = props;
@@ -20,7 +20,7 @@ const GitlabUsersSelect: FC<GitlabUsersSelectProps> = (
   const [options, setOptions] = useState([]);
 
   useEffect(() => {
-    setIsLoading(true)
+    setIsLoading(true);
     setIsError(false);
 
     service
