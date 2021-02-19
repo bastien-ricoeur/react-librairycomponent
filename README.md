@@ -4,7 +4,9 @@
   <img style="margin-left: 2px; margin-right: 2px;" src="https://img.shields.io/badge/Code-TypeScript-3178C6?logo=typescript&logoColor=white" />
   <img style="margin-left: 2px; margin-right: 2px;" src="https://img.shields.io/badge/Code-JavaScript-F7DF1E?logo=javascript&logoColor=white" />
   <img style="margin-left: 2px; margin-right: 2px;" src="https://img.shields.io/badge/Code-CSS3-1572B6?logo=css3&logoColor=white" />
-  <img style="margin-left: 2px; margin-right: 2px;" src="https://img.shields.io/badge/Doc-Storybook-FF4785?logo=storybook&logoColor=white" />
+  <a href="https://602fb1637d0cff00233b568c-vqguctfrts.chromatic.com/" target="_blank">
+    <img style="margin-left: 2px; margin-right: 2px;" src="https://img.shields.io/badge/Doc-Storybook-FF4785?logo=storybook&logoColor=white" />
+  </a>
   <img style="margin-left: 2px; margin-right: 2px;" src="https://img.shields.io/badge/Testing-Jest-C21325?logo=jest&logoColor=white" />
   <img style="margin-left: 2px; margin-right: 2px;" src="https://img.shields.io/badge/IDE-VS%20Code-007ACC?logo=visual%20studio%20code&logoColor=whit" />
 </p>
