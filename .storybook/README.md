@@ -20,6 +20,13 @@ Use the package manager [npm](https://www.npmjs.com) to install it.
 npm install @bastienricoeur/components
 ```
 
+To install this librairy you need to authenticate you on npm registry. 
+To do that you need to create a .npmrc file in your project root and copy this line :
+```bash
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}
+```
+And you need to create a environment varibale with your npm token.
+
 ## 🔨 Usage
 
 ```js
