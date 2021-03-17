@@ -41,7 +41,7 @@ describe('ButtonWithIcon', () => {
   describe('render()', () => {
     it('renders a submit button', () => {
       const { container } = render(<ButtonWithIcon {...props} />);
-      expect(container.firstChild).toMatchInlineSnapshot(`
+      expect(container.firstChild).tptoMatchInlineSnapshot(`
         <button
           class="root-0-2-1 root-d2-0-2-5"
           data-testid="button"

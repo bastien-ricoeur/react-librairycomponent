@@ -1,4 +1,4 @@
 export default {
-  colorPrimary: '#3e9f92',
-  colorSecondary: '#8892b0',
+  primary: '#0071ce',
+  ligthPrimary: '#7FB8E6',
 };

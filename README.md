@@ -19,7 +19,7 @@ This library uses [react-select](https://react-select.com) and [react-icons](htt
 Use the package manager [npm](https://www.npmjs.com) to install it.
 
 ```bash
-npm install @bastienricoeur/components
+npx create-react-app my-app --template @bastienricoeur/simple-crud
 ```
 
 To install this librairy you need to authenticate you on npm registry. 
