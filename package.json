@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 9009 -s public",
-    "test": "react-scripts test --watchAll=false",
+    "test": "jest --coverage",
     "lint": "eslint ./src/**/*.{js,jsx,ts,tsx}",
     "lint:fix": "eslint --fix ./src/**/*.{js,jsx,ts,tsx}",
     "build-storybook": "build-storybook",
@@ -80,10 +80,12 @@
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
     "husky": "^5.0.9",
+    "jest-transform-css": "^2.1.0",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rimraf": "^3.0.2",
-    "storybook-readme": "^5.0.9"
+    "storybook-readme": "^5.0.9",
+    "ts-jest": "^26.5.4"
   }
 }
