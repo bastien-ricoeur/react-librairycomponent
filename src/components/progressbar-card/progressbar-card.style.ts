@@ -21,13 +21,14 @@ export default createUseStyles((theme: any) => ({
   iconContainer: {
     width: (props: { widthHeightIcon: number }) => props.widthHeightIcon,
     height: (props: { widthHeightIcon: number }) => props.widthHeightIcon,
-    color: (props: { iconColor: string }) => props.iconColor || theme.primary,
+    color: (props: { primaryColor: string }) =>
+      props.primaryColor || theme.primary,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: (props: { iconFontSize: number }) => props.iconFontSize,
-    backgroundColor: (props: { iconBackground: string }) =>
-      props.iconBackground || theme.ligthPrimary,
+    backgroundColor: (props: { secondColor: string }) =>
+      props.secondColor || theme.lightPrimary,
     borderRadius: '100%',
   },
   cardContent: {
@@ -35,5 +36,12 @@ export default createUseStyles((theme: any) => ({
   },
   cardLabel: {
     fontSize: (props: { labelFontSize: number }) => props.labelFontSize,
+  },
+  cardDescritpion: {
+    color: '#bdbdbd',
+    fontSize: (props: { labelFontSize: number }) => props.labelFontSize - 7,
+    marginBottom: 3,
+    marginLeft: 2,
+    marginTop: -5,
   },
 }));

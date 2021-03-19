@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { IoPizza } from 'react-icons/io5';
+import ProgressBar from '../progress-bar';
 
 import useStyles from './progressbar-card.style';
 
@@ -7,8 +8,8 @@ export type ProgressBarCardProps = {
   completed: number;
   label: string;
   total: number;
-  iconColor?: string;
-  iconBackground?: string;
+  primaryColor?: string;
+  secondColor?: string;
   size?: 'small' | 'medium' | 'large';
 };
 
@@ -16,8 +17,8 @@ const ProgressBarCard: React.FC<ProgressBarCardProps> = ({
   completed,
   label,
   total,
-  iconColor,
-  iconBackground,
+  primaryColor,
+  secondColor,
   size = 'medium',
 }) => {
   let width = 0;
@@ -58,8 +59,8 @@ const ProgressBarCard: React.FC<ProgressBarCardProps> = ({
     width,
     height,
     widthHeightIcon,
-    iconColor,
-    iconBackground,
+    primaryColor,
+    secondColor,
     iconFontSize,
     labelFontSize,
     contentWidth,
@@ -67,20 +68,26 @@ const ProgressBarCard: React.FC<ProgressBarCardProps> = ({
 
   return (
     <div className={classes.root}>
-      {completed <= total ? (
+      {completed <= total && (
         <div className={classes.card}>
           <div className={classes.iconContainer}>
             <IoPizza />
           </div>
           <div className={classes.cardContent}>
-            <p className={classes.cardLabel}>{label}</p>
-            <p>
-              {completed} / {total}
-            </p>
+            <div className={classes.cardLabel}>{label}</div>
+            {size !== 'small' && (
+              <div className={classes.cardDescritpion}>
+                {completed} / {total}
+              </div>
+            )}
+            <div>
+              <ProgressBar
+                completed={Math.floor((completed / total) * 100)}
+                bgcolor={primaryColor}
+              />
+            </div>
           </div>
         </div>
-      ) : (
-        'Une erreur est survenue'
       )}
     </div>
   );

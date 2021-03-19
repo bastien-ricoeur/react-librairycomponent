@@ -15,10 +15,10 @@ stories.add(
   () => (
     <ProgressBarCard
       completed={number('Completed', 2)}
-      label={text('Label', 'Brown Bag Lunch')}
       total={number('Total', 4)}
-      iconColor={color('Icon color', '')}
-      iconBackground={color('Icon background-color', '')}
+      label={text('Label', 'Brown Bag Lunch')}
+      primaryColor={color('Primary color', '')}
+      secondColor={color('Second color', '')}
       size={select(
         'Icon name',
         { Small: 'small', Medium: 'medium', Large: 'large' },

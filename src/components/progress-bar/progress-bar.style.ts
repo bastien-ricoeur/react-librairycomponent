@@ -2,11 +2,11 @@ import { createUseStyles } from 'react-jss';
 
 export default createUseStyles((theme: any) => ({
   root: {
-    height: 20,
+    height: 10,
     width: '100%',
     backgroundColor: theme.gray,
     borderRadius: 50,
-    margin: 50,
+    overflow: 'hidden',
   },
   filler: {
     height: '100%',
@@ -22,7 +22,7 @@ export default createUseStyles((theme: any) => ({
   },
   label: {
     color: 'white',
-    fontWeight: 'bold',
     paddingRight: 5,
+    fontSize: 10,
   },
 }));

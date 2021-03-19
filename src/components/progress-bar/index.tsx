@@ -11,17 +11,20 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ bgcolor, completed }) => {
   const [currentCompleted, setCurrentCompleted] = useState(0);
 
   useEffect(() => {
-    setInterval(() => setCurrentCompleted(completed), 1000);
-  }, []);
+    const interval = setInterval(() => setCurrentCompleted(completed), 500);
+    return () => clearInterval(interval);
+  }, [completed]);
 
   const classes = useStyles({ bgcolor, currentCompleted });
 
   return (
     <div>
-      {completed <= 100 ? (
+      {completed <= 100 && completed > 0 ? (
         <div className={classes.root}>
           <div className={classes.filler}>
-            <span className={classes.label}>{`${currentCompleted}%`}</span>
+            <span className={classes.label}>{`${
+              currentCompleted || ''
+            }%`}</span>
           </div>
         </div>
       ) : (

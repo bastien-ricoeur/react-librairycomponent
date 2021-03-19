@@ -1,19 +1,19 @@
-# Simple select
+# ProgressBar card
 
 <!-- STORY -->
 
 <hr>
 
-A component which allow people to select a value in a list of options.
+A component which display a card with an icon, a progress bar and some text
 
 ##### Import
 
 ```js
-import { Select } from '@bastienricoeur/components';
+import { ProgressBarCard } from '@bastienricoeur/components';
 ```
 
 ##### Usage
 
 ```jsx
-<Select options={[{'label': 'Option 1', 'value': 'option1'}]} />
+<ProgressBarCard completed={2} total={4} label='Sales' />
 ```

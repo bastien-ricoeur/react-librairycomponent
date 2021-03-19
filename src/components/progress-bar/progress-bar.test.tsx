@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { act, render } from '@testing-library/react';
 
 import ProgressBar, { ProgressBarProps } from '.';
 
@@ -13,8 +13,11 @@ describe('ProgressBar', () => {
   });
 
   describe('render()', () => {
-    it('renders a progress bar', () => {
-      const { container } = render(<ProgressBar {...props} />);
+    it('renders a progress bar', async () => {
+      let container;
+      act(() => {
+        container = render(<ProgressBar {...props} />).container;
+      });
       expect(container.firstChild).toMatchInlineSnapshot(`
       <div>
         <div
@@ -26,7 +29,7 @@ describe('ProgressBar', () => {
             <span
               class="label-0-2-3"
             >
-              0%
+              %
             </span>
           </div>
         </div>

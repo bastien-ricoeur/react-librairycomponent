@@ -4,8 +4,7 @@
 
 <hr>
 
-Animated progress bar component
-Inspire by [@ramonak/react-progress-bar](https://www.npmjs.com/package/@ramonak/react-progress-bar)
+Animated progress bar component (Inspire by [@ramonak/react-progress-bar](https://www.npmjs.com/package/@ramonak/react-progress-bar))
 
 ##### Import
 
