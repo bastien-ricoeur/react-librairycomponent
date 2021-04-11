@@ -2,8 +2,8 @@ import { createUseStyles } from 'react-jss';
 
 export default createUseStyles((theme: any) => ({
   root: {
-    width: (props: { width: number }) => props.width,
-    height: (props: { height: number }) => props.height,
+    width: '100%',
+    height: '100%',
     borderRadius: 5,
     boxShadow:
       'rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px',
@@ -16,6 +16,7 @@ export default createUseStyles((theme: any) => ({
     height: '80%',
     display: 'flex',
     alignItems: 'center',
+    backgroundColor: '#ffffff',
     justifyContent: 'space-between',
   },
   iconContainer: {

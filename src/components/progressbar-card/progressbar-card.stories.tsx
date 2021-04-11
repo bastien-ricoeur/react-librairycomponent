@@ -13,18 +13,20 @@ stories.addDecorator(withKnobs);
 stories.add(
   'ProgressBar Card',
   () => (
-    <ProgressBarCard
-      completed={number('Completed', 2)}
-      total={number('Total', 4)}
-      label={text('Label', 'Brown Bag Lunch')}
-      primaryColor={color('Primary color', '')}
-      secondColor={color('Second color', '')}
-      size={select(
-        'Icon name',
-        { Small: 'small', Medium: 'medium', Large: 'large' },
-        'medium'
-      )}
-    />
+    <div style={{ width: 350, height: 150 }}>
+      <ProgressBarCard
+        completed={number('Completed', 2)}
+        total={number('Total', 4)}
+        label={text('Label', 'Brown Bag Lunch')}
+        primaryColor={color('Primary color', '')}
+        secondColor={color('Second color', '')}
+        size={select(
+          'Icon name',
+          { Small: 'small', Medium: 'medium', Large: 'large' },
+          'medium'
+        )}
+      />
+    </div>
   ),
   {
     readme: {

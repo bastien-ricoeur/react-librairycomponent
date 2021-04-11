@@ -5,4 +5,3 @@ export { default as WeatherSelect } from './select-weather';
 export { default as GitlabUsersSelect } from './select-gitlabusers';
 export { default as ProgressBar } from './progress-bar';
 export { default as ProgressBarCard } from './progressbar-card';
-
