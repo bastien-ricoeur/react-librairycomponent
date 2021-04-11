@@ -18,10 +18,20 @@ stories.add(
         completed={number('Completed', 2)}
         total={number('Total', 4)}
         label={text('Label', 'Brown Bag Lunch')}
+        icon={select(
+          'Icon name',
+          {
+            Pizza: 'pizza',
+            Linkedin: 'linkedin',
+            Checkmark: 'checkmark',
+            Document: 'document',
+          },
+          'pizza'
+        )}
         primaryColor={color('Primary color', '')}
         secondColor={color('Second color', '')}
         size={select(
-          'Icon name',
+          'Card size',
           { Small: 'small', Medium: 'medium', Large: 'large' },
           'medium'
         )}

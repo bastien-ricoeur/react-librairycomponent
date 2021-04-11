@@ -9,14 +9,14 @@ export default createUseStyles((theme: any) => ({
       'rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px',
     display: 'flex',
     alignItems: 'center',
+    backgroundColor: '#ffffff',
     justifyContent: 'center',
   },
   card: {
-    width: '80%',
+    width: '86%',
     height: '80%',
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
     justifyContent: 'space-between',
   },
   iconContainer: {
@@ -43,6 +43,5 @@ export default createUseStyles((theme: any) => ({
     fontSize: (props: { labelFontSize: number }) => props.labelFontSize - 7,
     marginBottom: 3,
     marginLeft: 2,
-    marginTop: -5,
   },
 }));
