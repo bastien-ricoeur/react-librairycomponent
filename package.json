@@ -1,7 +1,7 @@
 {
   "name": "@bastienricoeur/components",
   "description": "React Component Library",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "private": false,
   "main": "lib/index.js",
   "license": "MIT",
@@ -25,6 +25,8 @@
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
+    "chart.js": "^2.9.4",
+    "react-chartjs-2": "^2.11.1",
     "react-icons": "^4.2.0",
     "react-jss": "^10.5.1",
     "react-scripts": "4.0.2",
