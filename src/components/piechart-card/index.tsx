@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { useTheme } from 'react-jss';
 
@@ -22,12 +22,6 @@ const PieChartCard: React.FC<PieChartCardProps> = ({
   label,
   size = 'medium',
 }) => {
-  const [displayComponent, setDisplayComponent] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setDisplayComponent(true), 500);
-  });
-
   let labelFontSize = 0;
 
   switch (size) {
@@ -49,8 +43,6 @@ const PieChartCard: React.FC<PieChartCardProps> = ({
   });
 
   const chartData = {
-    maintainAspectRatio: false,
-    responsive: false,
     labels: data.map((obj: ChartData) => obj.label),
     datasets: [
       {
@@ -74,19 +66,19 @@ const PieChartCard: React.FC<PieChartCardProps> = ({
     ],
   };
 
+  const options = {
+    maintainAspectRatio: false,
+    animation: {
+      duration: 3000,
+    },
+  };
+
   return (
     <div className={classes.root}>
       <div className={classes.chartLabel}>{label}</div>
-      {displayComponent && (
-        <div className={classes.chartContainer}>
-          <Doughnut
-            data={chartData}
-            options={{
-              maintainAspectRatio: false,
-            }}
-          />
-        </div>
-      )}
+      <div className={classes.chartContainer}>
+        <Doughnut data={chartData} options={options} />
+      </div>
     </div>
   );
 };

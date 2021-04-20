@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { useTheme } from 'react-jss';
 
@@ -24,12 +24,6 @@ const GroupedBarChartCard: React.FC<GroupedBarChartCardProps> = ({
   label,
   size = 'medium',
 }) => {
-  const [displayComponent, setDisplayComponent] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setDisplayComponent(true), 500);
-  });
-
   let labelFontSize = 0;
   let barSize = 0;
 
@@ -102,16 +96,17 @@ const GroupedBarChartCard: React.FC<GroupedBarChartCardProps> = ({
         },
       ],
     },
+    animation: {
+      duration: 3000,
+    },
   };
 
   return (
     <div className={classes.root}>
       <div className={classes.chartLabel}>{label}</div>
-      {displayComponent && (
-        <div>
-          <Bar data={chartData} options={options} />
-        </div>
-      )}
+      <div>
+        <Bar data={chartData} options={options} />
+      </div>
     </div>
   );
 };
