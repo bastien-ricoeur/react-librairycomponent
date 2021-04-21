@@ -12,6 +12,7 @@ import README from "./README.md";
 import React from "react";
 import SIDEREADME from "./SIDEREADME.md";
 import { storiesOf } from "@storybook/react";
+import { IconName } from "../icon-name";
 
 const stories = storiesOf("Dashboard card", module);
 
@@ -29,12 +30,12 @@ stories.add(
         icon={select(
           "Icon name",
           {
-            Pizza: "pizza",
-            Linkedin: "linkedin",
-            Checkmark: "checkmark",
-            Document: "document",
+            Pizza: IconName.pizza,
+            Linkedin: IconName.linkedin,
+            Checkmark: IconName.checkmark,
+            Document: IconName.document,
           },
-          "pizza"
+          IconName.pizza
         )}
         primaryColor={color("Primary color", "")}
         secondColor={color("Second color", "")}

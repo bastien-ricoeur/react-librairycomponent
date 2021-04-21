@@ -11,13 +11,14 @@ import ProgressBar from "../progress-bar";
 import ProgressBarSkeletonCard from "./skeleton";
 import { ReactElement } from "react";
 import useStyles from "./progressbar-card.style";
+import { IconName } from "../icon-name";
 
 export type ProgressBarCardProps = {
   completed: number;
   label: string;
   total: number;
   isLoading?: boolean;
-  icon?: "pizza" | "linkedin" | "checkmark" | "document";
+  icon?: IconName;
   primaryColor?: string;
   secondColor?: string;
   size?: "small" | "medium" | "large";
@@ -28,7 +29,7 @@ const ProgressBarCard = ({
   label,
   total,
   isLoading = false,
-  icon = "pizza",
+  icon = IconName.pizza,
   primaryColor,
   secondColor,
   size = "medium",
@@ -69,16 +70,16 @@ const ProgressBarCard = ({
   });
 
   const renderIcon = (
-    iconName: "pizza" | "linkedin" | "checkmark" | "document"
+    iconName: IconName
   ): ReactElement => {
     switch (iconName) {
-      case "pizza":
+      case IconName.pizza:
         return <IoPizza />;
-      case "linkedin":
+      case IconName.linkedin:
         return <IoLogoLinkedin />;
-      case "checkmark":
+      case IconName.checkmark:
         return <IoCheckmarkDoneCircleSharp />;
-      case "document":
+      case IconName.document:
         return <IoDocumentText />;
       default:
         return <div>No match</div>;

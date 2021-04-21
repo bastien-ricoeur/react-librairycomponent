@@ -39,7 +39,9 @@ describe("ProgressBar", () => {
       props.completed = 101;
 
       const { container } = render(<ProgressBar {...props} />);
-      expect(container.firstChild).toMatchInlineSnapshot(`Une erreur est survenue`);
+      expect(container.firstChild).toMatchInlineSnapshot(
+        `Une erreur est survenue`
+      );
     });
   });
 });
