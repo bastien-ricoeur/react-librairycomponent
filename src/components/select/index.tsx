@@ -10,9 +10,7 @@ export type CustomSelectProps = {
   onChange?: (_value: any, _event: any) => void;
 };
 
-const CustomSelect = (
-  props: CustomSelectProps
-) => {
+const CustomSelect = (props: CustomSelectProps) => {
   const { options, value, isClearable, onChange } = props;
   return (
     <Select

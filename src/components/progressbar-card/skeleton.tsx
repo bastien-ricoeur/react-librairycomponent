@@ -17,9 +17,8 @@ const ProgressBarSkeletonCard = ({
   contentWidth,
   primaryColor,
   secondColor,
-  size
+  size,
 }: ProgressBarSkeletonCardProps) => {
-
   const classes = useStyles({
     widthHeightIcon,
     primaryColor,
@@ -27,19 +26,27 @@ const ProgressBarSkeletonCard = ({
     iconFontSize,
     labelFontSize,
     contentWidth,
-    size
+    size,
   });
 
   return (
     <div className={classes.root}>
       <div className={classes.card}>
-        <div className={`${classes.iconContainer} ${classes.skeletonAnimation}`}></div>
+        <div
+          className={`${classes.iconContainer} ${classes.skeletonAnimation}`}
+        ></div>
         <div className={classes.cardContent}>
-          <div className={`${classes.cardLabel} ${classes.skeletonAnimation} ${classes.cardLabelSkeleton}`}></div>
+          <div
+            className={`${classes.cardLabel} ${classes.skeletonAnimation} ${classes.cardLabelSkeleton}`}
+          ></div>
           {size !== "small" && (
-            <div className={`${classes.cardDescritpion} ${classes.skeletonAnimation} ${classes.cardDescritpionSkeleton}`}></div>
+            <div
+              className={`${classes.cardDescritpion} ${classes.skeletonAnimation} ${classes.cardDescritpionSkeleton}`}
+            ></div>
           )}
-          <div className={`${classes.skeletonAnimation} ${classes.cardProgressBarSkeleton}`}>
+          <div
+            className={`${classes.skeletonAnimation} ${classes.cardProgressBarSkeleton}`}
+          >
             ProgressBar
           </div>
         </div>

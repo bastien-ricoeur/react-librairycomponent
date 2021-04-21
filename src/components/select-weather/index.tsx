@@ -12,9 +12,7 @@ export type WeatherSelectProps = {
   onChange?: (_value: any, _event: any) => void;
 };
 
-const WeatherSelect = (
-  props: WeatherSelectProps
-) => {
+const WeatherSelect = (props: WeatherSelectProps) => {
   const { isClearable, onChange } = props;
   const { Option } = components;
 

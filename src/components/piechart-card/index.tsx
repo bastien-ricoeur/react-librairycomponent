@@ -14,11 +14,7 @@ export type PieChartCardProps = {
   size?: "small" | "medium" | "large";
 };
 
-const PieChartCard = ({
-  data,
-  label,
-  size = "medium",
-}: PieChartCardProps) => {
+const PieChartCard = ({ data, label, size = "medium" }: PieChartCardProps) => {
   let labelFontSize = 0;
 
   switch (size) {

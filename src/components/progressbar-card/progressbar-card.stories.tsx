@@ -1,4 +1,11 @@
-import { boolean, color, number, select, text, withKnobs } from "@storybook/addon-knobs";
+import {
+  boolean,
+  color,
+  number,
+  select,
+  text,
+  withKnobs,
+} from "@storybook/addon-knobs";
 
 import ProgressBarCard from ".";
 import README from "./README.md";

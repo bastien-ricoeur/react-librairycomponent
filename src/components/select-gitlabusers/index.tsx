@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import Select, { components } from "react-select";
+import { useEffect, useState } from "react";
 
 import { IGitlabService } from "./service/gitlab-service.interface";
 
@@ -10,9 +10,7 @@ export type GitlabUsersSelectProps = {
   onChange?: (_value: any, _event: any) => void;
 };
 
-const GitlabUsersSelect = (
-  props: GitlabUsersSelectProps
-) => {
+const GitlabUsersSelect = (props: GitlabUsersSelectProps) => {
   const { gitLabUrl, privateToken, service, onChange } = props;
   const { Option } = components;
 

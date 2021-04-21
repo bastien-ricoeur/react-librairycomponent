@@ -33,7 +33,7 @@ export default createUseStyles((theme: any) => ({
     borderRadius: "100%",
   },
   skeletonAnimation: {
-    animation: 'pulse 2s infinite ease-in-out'
+    animation: "pulse 2s infinite ease-in-out",
   },
   cardContent: {
     width: (props: { contentWidth: string }) => props.contentWidth,
@@ -55,10 +55,10 @@ export default createUseStyles((theme: any) => ({
     height: (props: { labelFontSize: number }) => props.labelFontSize - 7,
     marginBottom: 8,
     marginLeft: 0,
-    width: '30%',
+    width: "30%",
   },
   cardProgressBarSkeleton: {
     height: (props: { labelFontSize: number }) => props.labelFontSize - 4,
     fontSize: 0,
-  }
+  },
 }));

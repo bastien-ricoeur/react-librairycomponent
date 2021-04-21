@@ -11,7 +11,7 @@ export type ButtonProps = {
 
 const Button = ({
   children,
-  onClick = () => { },
+  onClick = () => {},
   disabled = false,
   type = "submit",
   color = "",

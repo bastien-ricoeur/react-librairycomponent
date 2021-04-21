@@ -1,16 +1,16 @@
+import "../../style/base.css";
+
 import {
   IoCheckmarkDoneCircleSharp,
   IoDocumentText,
   IoLogoLinkedin,
   IoPizza,
 } from "react-icons/io5";
-import { ReactElement } from "react";
-
-import '../../style/base.css';
 
 import ProgressBar from "../progress-bar";
-import useStyles from "./progressbar-card.style";
 import ProgressBarSkeletonCard from "./skeleton";
+import { ReactElement } from "react";
+import useStyles from "./progressbar-card.style";
 
 export type ProgressBarCardProps = {
   completed: number;
@@ -106,7 +106,15 @@ const ProgressBarCard = ({
           </div>
         </div>
       ) : (
-        <ProgressBarSkeletonCard widthHeightIcon={widthHeightIcon} iconFontSize={iconFontSize} labelFontSize={labelFontSize} contentWidth={contentWidth} primaryColor={primaryColor} secondColor={secondColor} size={size} />
+        <ProgressBarSkeletonCard
+          widthHeightIcon={widthHeightIcon}
+          iconFontSize={iconFontSize}
+          labelFontSize={labelFontSize}
+          contentWidth={contentWidth}
+          primaryColor={primaryColor}
+          secondColor={secondColor}
+          size={size}
+        />
       )}
     </div>
   );

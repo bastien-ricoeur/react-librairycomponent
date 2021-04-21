@@ -19,19 +19,17 @@ describe("ProgressBar", () => {
         container = render(<ProgressBar {...props} />).container;
       });
       expect(container.firstChild).toMatchInlineSnapshot(`
-      <div>
+      <div
+        class="root-0-2-1"
+      >
         <div
-          class="root-0-2-1"
+          class="filler-0-2-2 filler-d0-0-2-4"
         >
-          <div
-            class="filler-0-2-2 filler-d0-0-2-4"
+          <span
+            class="label-0-2-3"
           >
-            <span
-              class="label-0-2-3"
-            >
-              90%
-            </span>
-          </div>
+            %
+          </span>
         </div>
       </div>
       `);
@@ -41,11 +39,7 @@ describe("ProgressBar", () => {
       props.completed = 101;
 
       const { container } = render(<ProgressBar {...props} />);
-      expect(container.firstChild).toMatchInlineSnapshot(`
-      <div>
-        Une erreur est survenue
-      </div>
-      `);
+      expect(container.firstChild).toMatchInlineSnapshot(`Une erreur est survenue`);
     });
   });
 });

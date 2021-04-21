@@ -15,7 +15,7 @@ export type ButtonWithIconProps = {
 const ButtonWithIcon = ({
   children,
   iconName = undefined,
-  onClick = () => { },
+  onClick = () => {},
   disabled = false,
   type = "submit",
   color = "",
