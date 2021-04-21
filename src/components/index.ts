@@ -7,4 +7,4 @@ export { default as ProgressBar } from "./progress-bar";
 export { default as ProgressBarCard } from "./progressbar-card";
 export { default as GroupedBarChartCard } from "./groupedbarchart-card";
 export { default as PieChartCard } from "./piechart-card";
-export { IconName } from '../enums/icon-name';
+export * from '../enums/icon-name';

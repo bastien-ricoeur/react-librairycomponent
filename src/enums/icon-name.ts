@@ -1,3 +1,3 @@
 export enum IconName {
-  pizza, linkedin, document, checkmark
+  pizza, linkedin, checkmark, document
 }

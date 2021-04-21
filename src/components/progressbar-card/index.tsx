@@ -11,7 +11,7 @@ import ProgressBar from "../progress-bar";
 import ProgressBarSkeletonCard from "./skeleton";
 import { ReactElement } from "react";
 import useStyles from "./progressbar-card.style";
-import { IconName } from "../icon-name";
+import { IconName } from "../../enums/icon-name";
 
 export type ProgressBarCardProps = {
   completed: number;
@@ -69,9 +69,7 @@ const ProgressBarCard = ({
     contentWidth,
   });
 
-  const renderIcon = (
-    iconName: IconName
-  ): ReactElement => {
+  const renderIcon = (iconName: IconName): ReactElement => {
     switch (iconName) {
       case IconName.pizza:
         return <IoPizza />;
