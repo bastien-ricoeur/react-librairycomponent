@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import useStyles from "./button.style";
 
 export type ButtonProps = {
@@ -11,14 +9,14 @@ export type ButtonProps = {
   dataTestId?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
   children,
-  onClick = () => {},
+  onClick = () => { },
   disabled = false,
   type = "submit",
   color = "",
   dataTestId = "button",
-}) => {
+}: ButtonProps) => {
   const classes = useStyles({ color });
 
   const handleClick = () => {

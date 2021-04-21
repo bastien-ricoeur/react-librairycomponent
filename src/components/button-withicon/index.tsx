@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { FaBasketballBall, FaSkiingNordic } from "react-icons/fa";
 
 import useStyles from "./button-withicon.style";
@@ -14,15 +12,15 @@ export type ButtonWithIconProps = {
   dataTestId?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const ButtonWithIcon: React.FC<ButtonWithIconProps> = ({
+const ButtonWithIcon = ({
   children,
   iconName = undefined,
-  onClick = () => {},
+  onClick = () => { },
   disabled = false,
   type = "submit",
   color = "",
   dataTestId = "button",
-}) => {
+}: ButtonWithIconProps) => {
   const classes = useStyles({ color });
 
   const handleClick = () => {

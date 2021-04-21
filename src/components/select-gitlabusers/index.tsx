@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Select, { components } from "react-select";
 
 import { IGitlabService } from "./service/gitlab-service.interface";
@@ -10,7 +10,7 @@ export type GitlabUsersSelectProps = {
   onChange?: (_value: any, _event: any) => void;
 };
 
-const GitlabUsersSelect: React.FC<GitlabUsersSelectProps> = (
+const GitlabUsersSelect = (
   props: GitlabUsersSelectProps
 ) => {
   const { gitLabUrl, privateToken, service, onChange } = props;
@@ -75,7 +75,7 @@ const GitlabUsersSelect: React.FC<GitlabUsersSelectProps> = (
   };
 
   return (
-    <div>
+    <>
       {isLoading && <span>Fetching gitlab API in progress</span>}
       {!isLoading && !isError && (
         <Select
@@ -90,7 +90,7 @@ const GitlabUsersSelect: React.FC<GitlabUsersSelectProps> = (
         />
       )}
       {!isLoading && isError && <span>Error while fetching Gitlab API...</span>}
-    </div>
+    </>
   );
 };
 

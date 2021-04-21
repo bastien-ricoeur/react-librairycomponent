@@ -3,5 +3,5 @@ export default {
   lightPrimary: "#92ceff",
   second: "#cfde00",
   ligthSecond: "#faffb3",
-  gray: "#e0e0de",
+  grey: "#e0e0de",
 };

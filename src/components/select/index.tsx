@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import Select from "react-select";
 
 export type CustomSelectProps = {
@@ -12,7 +10,7 @@ export type CustomSelectProps = {
   onChange?: (_value: any, _event: any) => void;
 };
 
-const CustomSelect: React.FC<CustomSelectProps> = (
+const CustomSelect = (
   props: CustomSelectProps
 ) => {
   const { options, value, isClearable, onChange } = props;

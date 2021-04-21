@@ -29,7 +29,7 @@ describe("ProgressBar", () => {
             <span
               class="label-0-2-3"
             >
-              %
+              90%
             </span>
           </div>
         </div>

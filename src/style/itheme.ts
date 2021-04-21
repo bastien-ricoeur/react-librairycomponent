@@ -3,5 +3,5 @@ export default interface Theme {
   lightPrimary: string;
   second: string;
   ligthSecond: string;
-  gray: string;
+  grey: string;
 }

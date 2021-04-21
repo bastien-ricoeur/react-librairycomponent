@@ -19,7 +19,7 @@ This library uses [react-select](https://react-select.com) and [react-icons](htt
 Use the package manager [npm](https://www.npmjs.com) to install it.
 
 ```bash
-npx create-react-app my-app --template @bastienricoeur/simple-crud
+npm install @bastienricoeur/components
 ```
 
 To install this librairy you need to authenticate you on npm registry. 
@@ -51,10 +51,6 @@ import { ButtonWithIcon } from '@bastienricoeur/components';
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
-If you want to contribute to the library you need to realize this steps to use git hooks for cleaning and testing your code :
-* Copy the content of git-hooks folder into your .git/hooks folder
-* Copy the husky.sh file from the node_modules/husky/scripts to your .git/hooks folder
 
 
 ## 📚 License

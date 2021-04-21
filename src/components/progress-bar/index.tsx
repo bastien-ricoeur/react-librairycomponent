@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import useStyles from "./progress-bar.style";
 
@@ -7,7 +7,7 @@ export type ProgressBarProps = {
   bgcolor?: string;
 };
 
-const ProgressBar: React.FC<ProgressBarProps> = ({ bgcolor, completed }) => {
+const ProgressBar = ({ bgcolor, completed }: ProgressBarProps) => {
   const [currentCompleted, setCurrentCompleted] = useState(0);
 
   useEffect(() => {
@@ -18,19 +18,18 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ bgcolor, completed }) => {
   const classes = useStyles({ bgcolor, currentCompleted });
 
   return (
-    <div>
+    <>
       {completed <= 100 && completed > 0 ? (
         <div className={classes.root}>
           <div className={classes.filler}>
-            <span className={classes.label}>{`${
-              currentCompleted || ""
-            }%`}</span>
+            <span className={classes.label}>{`${currentCompleted || ""
+              }%`}</span>
           </div>
         </div>
       ) : (
         "Une erreur est survenue"
       )}
-    </div>
+    </>
   );
 };
 

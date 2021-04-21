@@ -32,11 +32,18 @@ export default createUseStyles((theme: any) => ({
       props.secondColor || theme.lightPrimary,
     borderRadius: "100%",
   },
+  skeletonAnimation: {
+    animation: 'pulse 2s infinite ease-in-out'
+  },
   cardContent: {
     width: (props: { contentWidth: string }) => props.contentWidth,
   },
   cardLabel: {
     fontSize: (props: { labelFontSize: number }) => props.labelFontSize,
+  },
+  cardLabelSkeleton: {
+    height: (props: { labelFontSize: number }) => props.labelFontSize + 2,
+    marginBottom: 8,
   },
   cardDescritpion: {
     color: "#bdbdbd",
@@ -44,4 +51,14 @@ export default createUseStyles((theme: any) => ({
     marginBottom: 3,
     marginLeft: 2,
   },
+  cardDescritpionSkeleton: {
+    height: (props: { labelFontSize: number }) => props.labelFontSize - 7,
+    marginBottom: 8,
+    marginLeft: 0,
+    width: '30%',
+  },
+  cardProgressBarSkeleton: {
+    height: (props: { labelFontSize: number }) => props.labelFontSize - 4,
+    fontSize: 0,
+  }
 }));

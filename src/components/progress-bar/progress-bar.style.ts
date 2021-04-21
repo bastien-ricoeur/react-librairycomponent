@@ -4,7 +4,7 @@ export default createUseStyles((theme: any) => ({
   root: {
     height: 10,
     width: "100%",
-    backgroundColor: theme.gray,
+    backgroundColor: theme.grey,
     borderRadius: 50,
     overflow: "hidden",
   },

@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import {
   FaCloudMeatball,
   FaCloudShowersHeavy,
@@ -14,7 +12,7 @@ export type WeatherSelectProps = {
   onChange?: (_value: any, _event: any) => void;
 };
 
-const WeatherSelect: React.FC<WeatherSelectProps> = (
+const WeatherSelect = (
   props: WeatherSelectProps
 ) => {
   const { isClearable, onChange } = props;

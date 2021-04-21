@@ -4,30 +4,35 @@ import {
   IoLogoLinkedin,
   IoPizza,
 } from "react-icons/io5";
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
+
+import '../../style/base.css';
 
 import ProgressBar from "../progress-bar";
 import useStyles from "./progressbar-card.style";
+import ProgressBarSkeletonCard from "./skeleton";
 
 export type ProgressBarCardProps = {
   completed: number;
   label: string;
   total: number;
+  isLoading?: boolean;
   icon?: "pizza" | "linkedin" | "checkmark" | "document";
   primaryColor?: string;
   secondColor?: string;
   size?: "small" | "medium" | "large";
 };
 
-const ProgressBarCard: React.FC<ProgressBarCardProps> = ({
+const ProgressBarCard = ({
   completed,
   label,
   total,
+  isLoading = false,
   icon = "pizza",
   primaryColor,
   secondColor,
   size = "medium",
-}) => {
+}: ProgressBarCardProps) => {
   let widthHeightIcon = 0;
   let iconFontSize = 0;
   let labelFontSize = 0;
@@ -82,7 +87,7 @@ const ProgressBarCard: React.FC<ProgressBarCardProps> = ({
 
   return (
     <div className={classes.root}>
-      {completed <= total && (
+      {!isLoading && completed <= total ? (
         <div className={classes.card}>
           <div className={classes.iconContainer}>{renderIcon(icon)}</div>
           <div className={classes.cardContent}>
@@ -100,6 +105,8 @@ const ProgressBarCard: React.FC<ProgressBarCardProps> = ({
             </div>
           </div>
         </div>
+      ) : (
+        <ProgressBarSkeletonCard widthHeightIcon={widthHeightIcon} iconFontSize={iconFontSize} labelFontSize={labelFontSize} contentWidth={contentWidth} primaryColor={primaryColor} secondColor={secondColor} size={size} />
       )}
     </div>
   );

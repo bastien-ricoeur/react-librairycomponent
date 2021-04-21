@@ -1,5 +1,4 @@
 import { Bar } from "react-chartjs-2";
-import React from "react";
 import Theme from "../../style/itheme";
 import useStyles from "./groupedbarchart-card.style";
 import { useTheme } from "react-jss";
@@ -16,12 +15,12 @@ export type GroupedBarChartCardProps = {
   size?: "small" | "medium" | "large";
 };
 
-const GroupedBarChartCard: React.FC<GroupedBarChartCardProps> = ({
+const GroupedBarChartCard = ({
   data,
   groupLabels,
   label,
   size = "medium",
-}) => {
+}: GroupedBarChartCardProps) => {
   let labelFontSize = 0;
   let barSize = 0;
 

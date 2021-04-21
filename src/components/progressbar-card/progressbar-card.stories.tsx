@@ -1,4 +1,4 @@
-import { color, number, select, text, withKnobs } from "@storybook/addon-knobs";
+import { boolean, color, number, select, text, withKnobs } from "@storybook/addon-knobs";
 
 import ProgressBarCard from ".";
 import README from "./README.md";
@@ -18,6 +18,7 @@ stories.add(
         completed={number("Completed", 2)}
         total={number("Total", 4)}
         label={text("Label", "Brown Bag Lunch")}
+        isLoading={boolean("Is loading", false)}
         icon={select(
           "Icon name",
           {

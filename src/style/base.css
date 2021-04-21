@@ -139,3 +139,20 @@ button {
     cursor: pointer;
     text-align: inherit;
 }
+
+@keyframes pulse {
+    0% {
+        background-color: #cfd8dc;
+        color: #cfd8dc;
+    }
+
+    50% {
+        background-color: #eceff1;
+        color: #eceff1;
+    }
+
+    100% {
+        background-color: #cfd8dc;
+        color: #cfd8dc;
+    }
+}

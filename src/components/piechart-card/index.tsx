@@ -1,5 +1,4 @@
 import { Doughnut } from "react-chartjs-2";
-import React from "react";
 import Theme from "../../style/itheme";
 import useStyles from "./piedchart-card.style";
 import { useTheme } from "react-jss";
@@ -15,11 +14,11 @@ export type PieChartCardProps = {
   size?: "small" | "medium" | "large";
 };
 
-const PieChartCard: React.FC<PieChartCardProps> = ({
+const PieChartCard = ({
   data,
   label,
   size = "medium",
-}) => {
+}: PieChartCardProps) => {
   let labelFontSize = 0;
 
   switch (size) {
