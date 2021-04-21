@@ -1,3 +1,6 @@
 export enum IconName {
-  pizza, linkedin, checkmark, document
+  pizza = 'pizza',
+  linkedin = 'linkedin',
+  checkmark = 'checkmark',
+  document = 'document',
 }

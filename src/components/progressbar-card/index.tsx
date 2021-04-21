@@ -7,11 +7,11 @@ import {
   IoPizza,
 } from "react-icons/io5";
 
+import { IconName } from "../../enums/icon-name";
 import ProgressBar from "../progress-bar";
 import ProgressBarSkeletonCard from "./skeleton";
 import { ReactElement } from "react";
 import useStyles from "./progressbar-card.style";
-import { IconName } from "../../enums/icon-name";
 
 export type ProgressBarCardProps = {
   completed: number;

@@ -7,12 +7,12 @@ import {
   withKnobs,
 } from "@storybook/addon-knobs";
 
+import { IconName } from "../../enums/icon-name";
 import ProgressBarCard from ".";
 import README from "./README.md";
 import React from "react";
 import SIDEREADME from "./SIDEREADME.md";
 import { storiesOf } from "@storybook/react";
-import { IconName } from "../../enums/icon-name";
 
 const stories = storiesOf("Dashboard card", module);
 
