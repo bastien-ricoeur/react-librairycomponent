@@ -1,10 +1,10 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { withKnobs, number, color } from "@storybook/addon-knobs";
+import { color, number, withKnobs } from "@storybook/addon-knobs";
 
-import README from "./README.md";
-import SIDEREADME from "./SIDEREADME.md";
 import ProgressBar from ".";
+import README from "./README.md";
+import React from "react";
+import SIDEREADME from "./SIDEREADME.md";
+import { storiesOf } from "@storybook/react";
 
 const stories = storiesOf("Progress", module);
 

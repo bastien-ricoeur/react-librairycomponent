@@ -40,6 +40,8 @@
     "test": "jest --coverage",
     "prettier": "prettier ./src/**/*.{js,jsx,ts,tsx}",
     "prettier:fix": "prettier ./src/**/*.{js,jsx,ts,tsx} --write",
+    "import-sort": "import-sort --l ./src/**/*.{js,jsx,ts,tsx}",
+    "import-sort:fix": "import-sort --write ./src/**/*.{js,jsx,ts,tsx}",
     "build-storybook": "build-storybook",
     "clean": "rimraf ./lib",
     "prebuild": "npm clean",
@@ -51,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier:fix",
+      "pre-commit": "npm run prettier:fix && npm run import-sort:fix",
       "pre-push": "npm run test"
     }
   },
@@ -86,6 +88,7 @@
     "chromatic": "^5.6.3",
     "copyfiles": "^2.4.1",
     "import-sort": "^6.0.0",
+    "import-sort-cli": "^6.0.0",
     "jest-transform-css": "^2.1.0",
     "prettier": "^2.2.1",
     "react": "^17.0.1",

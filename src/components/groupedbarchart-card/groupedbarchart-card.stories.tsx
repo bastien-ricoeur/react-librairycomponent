@@ -1,10 +1,10 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { withKnobs, select, text, object, array } from "@storybook/addon-knobs";
+import { array, object, select, text, withKnobs } from "@storybook/addon-knobs";
 
-import README from "./README.md";
-import SIDEREADME from "./SIDEREADME.md";
 import GroupedBarChartCard from ".";
+import README from "./README.md";
+import React from "react";
+import SIDEREADME from "./SIDEREADME.md";
+import { storiesOf } from "@storybook/react";
 
 const stories = storiesOf("Dashboard card", module);
 

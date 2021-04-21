@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Select, { components } from "react-select";
+
 import { IGitlabService } from "./service/gitlab-service.interface";
 
 export type GitlabUsersSelectProps = {

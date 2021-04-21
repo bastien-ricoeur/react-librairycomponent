@@ -1,12 +1,12 @@
-import React, { ReactElement } from "react";
 import {
-  IoPizza,
-  IoLogoLinkedin,
   IoCheckmarkDoneCircleSharp,
   IoDocumentText,
+  IoLogoLinkedin,
+  IoPizza,
 } from "react-icons/io5";
-import ProgressBar from "../progress-bar";
+import React, { ReactElement } from "react";
 
+import ProgressBar from "../progress-bar";
 import useStyles from "./progressbar-card.style";
 
 export type ProgressBarCardProps = {

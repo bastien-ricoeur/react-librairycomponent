@@ -1,7 +1,7 @@
+import CustomSelect, { CustomSelectProps } from ".";
+
 import React from "react";
 import { render } from "@testing-library/react";
-
-import CustomSelect, { CustomSelectProps } from ".";
 
 describe("CustomSelect", () => {
   let props: CustomSelectProps;

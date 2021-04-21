@@ -1,10 +1,10 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { withKnobs, color, number, select, text } from "@storybook/addon-knobs";
+import { color, number, select, text, withKnobs } from "@storybook/addon-knobs";
 
-import README from "./README.md";
-import SIDEREADME from "./SIDEREADME.md";
 import ProgressBarCard from ".";
+import README from "./README.md";
+import React from "react";
+import SIDEREADME from "./SIDEREADME.md";
+import { storiesOf } from "@storybook/react";
 
 const stories = storiesOf("Dashboard card", module);
 

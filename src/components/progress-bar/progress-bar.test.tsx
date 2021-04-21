@@ -1,7 +1,7 @@
-import React from "react";
+import ProgressBar, { ProgressBarProps } from ".";
 import { act, render } from "@testing-library/react";
 
-import ProgressBar, { ProgressBarProps } from ".";
+import React from "react";
 
 describe("ProgressBar", () => {
   let props: ProgressBarProps;

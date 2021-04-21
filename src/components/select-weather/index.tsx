@@ -1,12 +1,13 @@
 import * as React from "react";
-import Select, { components } from "react-select";
+
 import {
   FaCloudMeatball,
   FaCloudShowersHeavy,
-  FaCloudSunRain,
   FaCloudSun,
+  FaCloudSunRain,
   FaSun,
 } from "react-icons/fa";
+import Select, { components } from "react-select";
 
 export type WeatherSelectProps = {
   isClearable?: boolean;

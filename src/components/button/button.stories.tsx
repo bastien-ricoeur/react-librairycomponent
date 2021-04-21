@@ -1,11 +1,11 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { withKnobs, text, boolean, color } from "@storybook/addon-knobs";
-import { action } from "@storybook/addon-actions";
+import { boolean, color, text, withKnobs } from "@storybook/addon-knobs";
 
-import README from "./README.md";
-import SIDEREADME from "./SIDEREADME.md";
 import Button from ".";
+import README from "./README.md";
+import React from "react";
+import SIDEREADME from "./SIDEREADME.md";
+import { action } from "@storybook/addon-actions";
+import { storiesOf } from "@storybook/react";
 
 const stories = storiesOf("Button", module);
 

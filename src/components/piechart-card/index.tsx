@@ -1,10 +1,8 @@
-import React from "react";
 import { Doughnut } from "react-chartjs-2";
-import { useTheme } from "react-jss";
-
+import React from "react";
 import Theme from "../../style/itheme";
-
 import useStyles from "./piedchart-card.style";
+import { useTheme } from "react-jss";
 
 export interface ChartData {
   label: string;

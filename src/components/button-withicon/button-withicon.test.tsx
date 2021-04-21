@@ -1,7 +1,7 @@
-import React from "react";
+import ButtonWithIcon, { ButtonWithIconProps } from ".";
 import { fireEvent, render } from "@testing-library/react";
 
-import ButtonWithIcon, { ButtonWithIconProps } from ".";
+import React from "react";
 
 describe("ButtonWithIcon", () => {
   let props: ButtonWithIconProps;

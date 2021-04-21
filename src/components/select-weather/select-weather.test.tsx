@@ -1,7 +1,7 @@
+import WeatherSelect, { WeatherSelectProps } from ".";
+
 import React from "react";
 import { render } from "@testing-library/react";
-
-import WeatherSelect, { WeatherSelectProps } from ".";
 
 describe("WeatherSelect", () => {
   let props: WeatherSelectProps;

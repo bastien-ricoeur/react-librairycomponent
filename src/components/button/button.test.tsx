@@ -1,7 +1,7 @@
-import React from "react";
+import Button, { ButtonProps } from ".";
 import { fireEvent, render } from "@testing-library/react";
 
-import Button, { ButtonProps } from ".";
+import React from "react";
 
 describe("Button", () => {
   let props: ButtonProps;
