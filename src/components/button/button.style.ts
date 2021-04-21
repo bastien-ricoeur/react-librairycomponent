@@ -1,29 +1,29 @@
-import { createUseStyles } from 'react-jss';
+import { createUseStyles } from "react-jss";
 
 export default createUseStyles((theme: any) => ({
   root: {
     color: (props: { color: string }) => props.color || theme.colorPrimary,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderWidth: 1,
     borderRadius: 8,
     borderColor: (props: { color: string }) =>
       props.color || theme.colorPrimary,
-    padding: '15px 32px',
-    transition: 'all 250ms',
-    '&:not([disabled])&:hover': {
-      color: 'white',
+    padding: "15px 32px",
+    transition: "all 250ms",
+    "&:not([disabled])&:hover": {
+      color: "white",
       backgroundColor: (props: { color: string }) =>
         props.color || theme.colorPrimary,
     },
-    '&:focus': {
-      outline: 'none',
+    "&:focus": {
+      outline: "none",
     },
-    '&[disabled]': {
+    "&[disabled]": {
       opacity: 0.3,
-      cursor: 'unset',
+      cursor: "unset",
     },
   },
   label: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 }));

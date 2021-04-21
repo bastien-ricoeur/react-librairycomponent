@@ -1,56 +1,56 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 import {
   IoPizza,
   IoLogoLinkedin,
   IoCheckmarkDoneCircleSharp,
   IoDocumentText,
-} from 'react-icons/io5';
-import ProgressBar from '../progress-bar';
+} from "react-icons/io5";
+import ProgressBar from "../progress-bar";
 
-import useStyles from './progressbar-card.style';
+import useStyles from "./progressbar-card.style";
 
 export type ProgressBarCardProps = {
   completed: number;
   label: string;
   total: number;
-  icon?: 'pizza' | 'linkedin' | 'checkmark' | 'document';
+  icon?: "pizza" | "linkedin" | "checkmark" | "document";
   primaryColor?: string;
   secondColor?: string;
-  size?: 'small' | 'medium' | 'large';
+  size?: "small" | "medium" | "large";
 };
 
 const ProgressBarCard: React.FC<ProgressBarCardProps> = ({
   completed,
   label,
   total,
-  icon = 'pizza',
+  icon = "pizza",
   primaryColor,
   secondColor,
-  size = 'medium',
+  size = "medium",
 }) => {
   let widthHeightIcon = 0;
   let iconFontSize = 0;
   let labelFontSize = 0;
-  let contentWidth = '';
+  let contentWidth = "";
 
   switch (size) {
-    case 'small':
+    case "small":
       widthHeightIcon = 30;
       iconFontSize = 20;
       labelFontSize = 12;
-      contentWidth = 'calc(100% - 42px)';
+      contentWidth = "calc(100% - 42px)";
       break;
-    case 'medium':
+    case "medium":
       widthHeightIcon = 75;
       iconFontSize = 40;
       labelFontSize = 18;
-      contentWidth = 'calc(100% - 90px)';
+      contentWidth = "calc(100% - 90px)";
       break;
     default:
       widthHeightIcon = 120;
       iconFontSize = 70;
       labelFontSize = 29;
-      contentWidth = 'calc(100% - 150px)';
+      contentWidth = "calc(100% - 150px)";
       break;
   }
 
@@ -64,16 +64,16 @@ const ProgressBarCard: React.FC<ProgressBarCardProps> = ({
   });
 
   const renderIcon = (
-    iconName: 'pizza' | 'linkedin' | 'checkmark' | 'document'
+    iconName: "pizza" | "linkedin" | "checkmark" | "document"
   ): ReactElement => {
     switch (iconName) {
-      case 'pizza':
+      case "pizza":
         return <IoPizza />;
-      case 'linkedin':
+      case "linkedin":
         return <IoLogoLinkedin />;
-      case 'checkmark':
+      case "checkmark":
         return <IoCheckmarkDoneCircleSharp />;
-      case 'document':
+      case "document":
         return <IoDocumentText />;
       default:
         return <div>No match</div>;
@@ -87,7 +87,7 @@ const ProgressBarCard: React.FC<ProgressBarCardProps> = ({
           <div className={classes.iconContainer}>{renderIcon(icon)}</div>
           <div className={classes.cardContent}>
             <div className={classes.cardLabel}>{label}</div>
-            {size !== 'small' && (
+            {size !== "small" && (
               <div className={classes.cardDescritpion}>
                 {completed} / {total}
               </div>

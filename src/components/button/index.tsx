@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from "react";
 
-import useStyles from './button.style';
+import useStyles from "./button.style";
 
 export type ButtonProps = {
   children: React.ReactNode;
@@ -15,9 +15,9 @@ const Button: React.FC<ButtonProps> = ({
   children,
   onClick = () => {},
   disabled = false,
-  type = 'submit',
-  color = '',
-  dataTestId = 'button',
+  type = "submit",
+  color = "",
+  dataTestId = "button",
 }) => {
   const classes = useStyles({ color });
 
@@ -30,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({
     type,
     onClick: handleClick,
     disabled,
-    'data-testid': dataTestId,
+    "data-testid": dataTestId,
   };
 
   return (

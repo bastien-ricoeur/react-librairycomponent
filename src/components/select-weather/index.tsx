@@ -1,12 +1,12 @@
-import * as React from 'react';
-import Select, { components } from 'react-select';
+import * as React from "react";
+import Select, { components } from "react-select";
 import {
   FaCloudMeatball,
   FaCloudShowersHeavy,
   FaCloudSunRain,
   FaCloudSun,
   FaSun,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 export type WeatherSelectProps = {
   isClearable?: boolean;
@@ -35,28 +35,28 @@ const WeatherSelect: React.FC<WeatherSelectProps> = (
 
   const options = [
     {
-      value: 'snowfall',
-      label: 'Snowfall',
+      value: "snowfall",
+      label: "Snowfall",
       icon: <FaCloudMeatball style={{ marginRight: 8 }} />,
     },
     {
-      value: 'heavy_rain',
-      label: 'Heavy rain',
+      value: "heavy_rain",
+      label: "Heavy rain",
       icon: <FaCloudShowersHeavy style={{ marginRight: 8 }} />,
     },
     {
-      value: 'rainy',
-      label: 'Rainy',
+      value: "rainy",
+      label: "Rainy",
       icon: <FaCloudSunRain style={{ marginRight: 8 }} />,
     },
     {
-      value: 'cloudy',
-      label: 'Cloudy',
+      value: "cloudy",
+      label: "Cloudy",
       icon: <FaCloudSun style={{ marginRight: 8 }} />,
     },
     {
-      value: 'sunny',
-      label: 'Sunny',
+      value: "sunny",
+      label: "Sunny",
       icon: <FaSun style={{ marginRight: 8 }} />,
     },
   ];

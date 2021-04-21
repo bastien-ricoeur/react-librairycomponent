@@ -1,39 +1,39 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+import React from "react";
+import { storiesOf } from "@storybook/react";
 import {
   withKnobs,
   text,
   boolean,
   color,
   select,
-} from '@storybook/addon-knobs';
-import { action } from '@storybook/addon-actions';
+} from "@storybook/addon-knobs";
+import { action } from "@storybook/addon-actions";
 
-import README from './README.md';
-import SIDEREADME from './SIDEREADME.md';
-import ButtonWithIcon from '.';
+import README from "./README.md";
+import SIDEREADME from "./SIDEREADME.md";
+import ButtonWithIcon from ".";
 
-const stories = storiesOf('Button', module);
+const stories = storiesOf("Button", module);
 
 stories.addDecorator(withKnobs);
 
 stories.add(
-  'With icon',
+  "With icon",
   () => {
-    const hasOnClick = boolean('Has onClick', true);
+    const hasOnClick = boolean("Has onClick", true);
 
     return (
       <ButtonWithIcon
         iconName={select(
-          'Icon name',
-          { BasketBall: 'BasketBall', Ski: 'Ski' },
-          'BasketBall'
+          "Icon name",
+          { BasketBall: "BasketBall", Ski: "Ski" },
+          "BasketBall"
         )}
-        onClick={hasOnClick ? action('onClick') : undefined}
-        color={color('Custom color', '')}
-        disabled={boolean('Disabled', false)}
+        onClick={hasOnClick ? action("onClick") : undefined}
+        color={color("Custom color", "")}
+        disabled={boolean("Disabled", false)}
       >
-        {text('Label', 'Button with icon')}
+        {text("Label", "Button with icon")}
       </ButtonWithIcon>
     );
   },

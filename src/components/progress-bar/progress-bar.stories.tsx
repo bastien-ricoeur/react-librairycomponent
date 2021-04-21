@@ -1,22 +1,22 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, number, color } from '@storybook/addon-knobs';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withKnobs, number, color } from "@storybook/addon-knobs";
 
-import README from './README.md';
-import SIDEREADME from './SIDEREADME.md';
-import ProgressBar from '.';
+import README from "./README.md";
+import SIDEREADME from "./SIDEREADME.md";
+import ProgressBar from ".";
 
-const stories = storiesOf('Progress', module);
+const stories = storiesOf("Progress", module);
 
 stories.addDecorator(withKnobs);
 
 stories.add(
-  'Progress Bar',
+  "Progress Bar",
   () => (
     <div style={{ width: 500 }}>
       <ProgressBar
-        completed={number('Completed percent', 90)}
-        bgcolor={color('Background color', '')}
+        completed={number("Completed percent", 90)}
+        bgcolor={color("Background color", "")}
       />
     </div>
   ),

@@ -1,5 +1,5 @@
-import * as React from 'react';
-import Select from 'react-select';
+import * as React from "react";
+import Select from "react-select";
 
 export type CustomSelectProps = {
   options: {

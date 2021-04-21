@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { FaBasketballBall, FaSkiingNordic } from 'react-icons/fa';
+import * as React from "react";
+import { FaBasketballBall, FaSkiingNordic } from "react-icons/fa";
 
-import useStyles from './button-withicon.style';
+import useStyles from "./button-withicon.style";
 
 export type ButtonWithIconProps = {
   children: React.ReactNode;
-  iconName?: 'BasketBall' | 'Ski' | undefined;
+  iconName?: "BasketBall" | "Ski" | undefined;
   onClick?: () => void;
   color?: string;
   type?: string;
@@ -18,9 +18,9 @@ const ButtonWithIcon: React.FC<ButtonWithIconProps> = ({
   iconName = undefined,
   onClick = () => {},
   disabled = false,
-  type = 'submit',
-  color = '',
-  dataTestId = 'button',
+  type = "submit",
+  color = "",
+  dataTestId = "button",
 }) => {
   const classes = useStyles({ color });
 
@@ -30,9 +30,9 @@ const ButtonWithIcon: React.FC<ButtonWithIconProps> = ({
 
   const RenderIcon = ({ icon }) => {
     switch (icon) {
-      case 'BasketBall':
+      case "BasketBall":
         return <FaBasketballBall size={30} />;
-      case 'Ski':
+      case "Ski":
         return <FaSkiingNordic size={30} />;
       default:
         return <FaSkiingNordic size={30} />;
@@ -44,7 +44,7 @@ const ButtonWithIcon: React.FC<ButtonWithIconProps> = ({
     type,
     onClick: handleClick,
     disabled,
-    'data-testid': dataTestId,
+    "data-testid": dataTestId,
   };
 
   return (

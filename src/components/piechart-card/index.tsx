@@ -1,10 +1,10 @@
-import React from 'react';
-import { Doughnut } from 'react-chartjs-2';
-import { useTheme } from 'react-jss';
+import React from "react";
+import { Doughnut } from "react-chartjs-2";
+import { useTheme } from "react-jss";
 
-import Theme from '../../style/itheme';
+import Theme from "../../style/itheme";
 
-import useStyles from './piedchart-card.style';
+import useStyles from "./piedchart-card.style";
 
 export interface ChartData {
   label: string;
@@ -14,21 +14,21 @@ export interface ChartData {
 export type PieChartCardProps = {
   data: Array<ChartData>;
   label: string;
-  size?: 'small' | 'medium' | 'large';
+  size?: "small" | "medium" | "large";
 };
 
 const PieChartCard: React.FC<PieChartCardProps> = ({
   data,
   label,
-  size = 'medium',
+  size = "medium",
 }) => {
   let labelFontSize = 0;
 
   switch (size) {
-    case 'small':
+    case "small":
       labelFontSize = 12;
       break;
-    case 'medium':
+    case "medium":
       labelFontSize = 18;
       break;
     default:
@@ -59,7 +59,7 @@ const PieChartCard: React.FC<PieChartCardProps> = ({
             case 3:
               return theme.ligthSecond;
             default:
-              return '';
+              return "";
           }
         }),
       },

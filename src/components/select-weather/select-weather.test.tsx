@@ -1,9 +1,9 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import React from "react";
+import { render } from "@testing-library/react";
 
-import WeatherSelect, { WeatherSelectProps } from '.';
+import WeatherSelect, { WeatherSelectProps } from ".";
 
-describe('WeatherSelect', () => {
+describe("WeatherSelect", () => {
   let props: WeatherSelectProps;
 
   beforeEach(() => {
@@ -13,8 +13,8 @@ describe('WeatherSelect', () => {
     };
   });
 
-  describe('render()', () => {
-    it('renders a weather select component', () => {
+  describe("render()", () => {
+    it("renders a weather select component", () => {
       const { container } = render(<WeatherSelect {...props} />);
       expect(container).toMatchInlineSnapshot(`
       <div>
@@ -99,7 +99,7 @@ describe('WeatherSelect', () => {
       `);
     });
 
-    it('renders a weather select component clearable', () => {
+    it("renders a weather select component clearable", () => {
       props.isClearable = true;
       const { container } = render(<WeatherSelect {...props} />);
       expect(container).toMatchInlineSnapshot(`

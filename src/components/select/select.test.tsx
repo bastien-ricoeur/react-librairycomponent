@@ -1,9 +1,9 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import React from "react";
+import { render } from "@testing-library/react";
 
-import CustomSelect, { CustomSelectProps } from '.';
+import CustomSelect, { CustomSelectProps } from ".";
 
-describe('CustomSelect', () => {
+describe("CustomSelect", () => {
   let props: CustomSelectProps;
 
   beforeEach(() => {
@@ -11,14 +11,14 @@ describe('CustomSelect', () => {
       isClearable: false,
       onChange: jest.fn(),
       options: [
-        { label: 'Option 1', value: 'option1' },
-        { label: 'Option 2', value: 'option2' },
+        { label: "Option 1", value: "option1" },
+        { label: "Option 2", value: "option2" },
       ],
     };
   });
 
-  describe('render()', () => {
-    it('renders a select component', () => {
+  describe("render()", () => {
+    it("renders a select component", () => {
       const { container } = render(<CustomSelect {...props} />);
       expect(container).toMatchInlineSnapshot(`
       <div>
@@ -91,7 +91,7 @@ describe('CustomSelect', () => {
       `);
     });
 
-    it('renders a select component clearable', () => {
+    it("renders a select component clearable", () => {
       props.isClearable = true;
       const { container } = render(<CustomSelect {...props} />);
       expect(container).toMatchInlineSnapshot(`

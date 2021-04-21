@@ -1,28 +1,28 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean, color } from '@storybook/addon-knobs';
-import { action } from '@storybook/addon-actions';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withKnobs, text, boolean, color } from "@storybook/addon-knobs";
+import { action } from "@storybook/addon-actions";
 
-import README from './README.md';
-import SIDEREADME from './SIDEREADME.md';
-import Button from '.';
+import README from "./README.md";
+import SIDEREADME from "./SIDEREADME.md";
+import Button from ".";
 
-const stories = storiesOf('Button', module);
+const stories = storiesOf("Button", module);
 
 stories.addDecorator(withKnobs);
 
 stories.add(
-  'Default',
+  "Default",
   () => {
-    const hasOnClick = boolean('Has onClick', true);
+    const hasOnClick = boolean("Has onClick", true);
 
     return (
       <Button
-        onClick={hasOnClick ? action('onClick') : undefined}
-        color={color('Custom color', '')}
-        disabled={boolean('Disabled', false)}
+        onClick={hasOnClick ? action("onClick") : undefined}
+        color={color("Custom color", "")}
+        disabled={boolean("Disabled", false)}
       >
-        {text('Label', 'Simple button')}
+        {text("Label", "Simple button")}
       </Button>
     );
   },

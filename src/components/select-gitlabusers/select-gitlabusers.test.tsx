@@ -1,27 +1,27 @@
-import React from 'react';
-import { act, render } from '@testing-library/react';
+import React from "react";
+import { act, render } from "@testing-library/react";
 
-import GitlabUsersSelect, { GitlabUsersSelectProps } from '.';
+import GitlabUsersSelect, { GitlabUsersSelectProps } from ".";
 import {
   DefaultMockService,
   ErrorMockService,
   DelayMockService,
-} from './service/mocks/gitlab-service.mock';
+} from "./service/mocks/gitlab-service.mock";
 
-describe('GitlabUsersSelect', () => {
+describe("GitlabUsersSelect", () => {
   let props: GitlabUsersSelectProps;
 
   beforeEach(() => {
     props = {
       service: new DefaultMockService(),
-      gitLabUrl: 'gitlab.com',
-      privateToken: 'my_token',
+      gitLabUrl: "gitlab.com",
+      privateToken: "my_token",
       onChange: jest.fn(),
     };
   });
 
-  describe('render()', () => {
-    it('renders a Gitlab users select component', async () => {
+  describe("render()", () => {
+    it("renders a Gitlab users select component", async () => {
       let container;
 
       await act(async () => {
@@ -108,7 +108,7 @@ describe('GitlabUsersSelect', () => {
       `);
     });
 
-    it('renders an error while fetching Gitlab API', async () => {
+    it("renders an error while fetching Gitlab API", async () => {
       let container;
       props.service = new ErrorMockService();
       await act(async () => {
@@ -126,7 +126,7 @@ describe('GitlabUsersSelect', () => {
       `);
     });
 
-    it('renders the loading component of Gitlab users select component', async () => {
+    it("renders the loading component of Gitlab users select component", async () => {
       let container;
       props.service = new DelayMockService();
       await act(async () => {

@@ -1,9 +1,9 @@
-import React from 'react';
-import { act, render } from '@testing-library/react';
+import React from "react";
+import { act, render } from "@testing-library/react";
 
-import ProgressBar, { ProgressBarProps } from '.';
+import ProgressBar, { ProgressBarProps } from ".";
 
-describe('ProgressBar', () => {
+describe("ProgressBar", () => {
   let props: ProgressBarProps;
 
   beforeEach(() => {
@@ -12,8 +12,8 @@ describe('ProgressBar', () => {
     };
   });
 
-  describe('render()', () => {
-    it('renders a progress bar', async () => {
+  describe("render()", () => {
+    it("renders a progress bar", async () => {
       let container;
       act(() => {
         container = render(<ProgressBar {...props} />).container;
@@ -37,7 +37,7 @@ describe('ProgressBar', () => {
       `);
     });
 
-    it('renders a error message (completed > 100)', () => {
+    it("renders a error message (completed > 100)", () => {
       props.completed = 101;
 
       const { container } = render(<ProgressBar {...props} />);

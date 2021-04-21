@@ -1,10 +1,10 @@
-import React from 'react';
-import { Bar } from 'react-chartjs-2';
-import { useTheme } from 'react-jss';
+import React from "react";
+import { Bar } from "react-chartjs-2";
+import { useTheme } from "react-jss";
 
-import Theme from '../../style/itheme';
+import Theme from "../../style/itheme";
 
-import useStyles from './groupedbarchart-card.style';
+import useStyles from "./groupedbarchart-card.style";
 
 export interface ChartData {
   label: string;
@@ -15,24 +15,24 @@ export type GroupedBarChartCardProps = {
   data: Array<ChartData>;
   groupLabels: Array<string>;
   label: string;
-  size?: 'small' | 'medium' | 'large';
+  size?: "small" | "medium" | "large";
 };
 
 const GroupedBarChartCard: React.FC<GroupedBarChartCardProps> = ({
   data,
   groupLabels,
   label,
-  size = 'medium',
+  size = "medium",
 }) => {
   let labelFontSize = 0;
   let barSize = 0;
 
   switch (size) {
-    case 'small':
+    case "small":
       labelFontSize = 12;
       barSize = 10;
       break;
-    case 'medium':
+    case "medium":
       labelFontSize = 18;
       barSize = 14;
       break;
@@ -67,7 +67,7 @@ const GroupedBarChartCard: React.FC<GroupedBarChartCardProps> = ({
           bgColor = theme.ligthSecond;
           break;
         default:
-          bgColor = '';
+          bgColor = "";
           break;
       }
 

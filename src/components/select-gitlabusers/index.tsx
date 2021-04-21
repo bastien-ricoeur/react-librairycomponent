@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import Select, { components } from 'react-select';
-import { IGitlabService } from './service/gitlab-service.interface';
+import React, { useEffect, useState } from "react";
+import Select, { components } from "react-select";
+import { IGitlabService } from "./service/gitlab-service.interface";
 
 export type GitlabUsersSelectProps = {
   gitLabUrl: string;
@@ -47,12 +47,12 @@ const GitlabUsersSelect: React.FC<GitlabUsersSelectProps> = (
       height="30"
       width="30"
       alt={avataUrl}
-      style={{ borderRadius: '50%', marginRight: 10 }}
+      style={{ borderRadius: "50%", marginRight: 10 }}
     />
   );
 
   const customSingleValue = (props: any) => (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
+    <div style={{ display: "flex", alignItems: "center" }}>
       {avatarRender(props.data.avatar_url)}
       {props.data.label}
     </div>
@@ -68,8 +68,8 @@ const GitlabUsersSelect: React.FC<GitlabUsersSelectProps> = (
   const customStyles = {
     option: (provided: any) => ({
       ...provided,
-      display: 'flex',
-      alignItems: 'center',
+      display: "flex",
+      alignItems: "center",
     }),
   };
 

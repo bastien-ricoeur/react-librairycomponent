@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import useStyles from './progress-bar.style';
+import useStyles from "./progress-bar.style";
 
 export type ProgressBarProps = {
   completed: number;
@@ -23,12 +23,12 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ bgcolor, completed }) => {
         <div className={classes.root}>
           <div className={classes.filler}>
             <span className={classes.label}>{`${
-              currentCompleted || ''
+              currentCompleted || ""
             }%`}</span>
           </div>
         </div>
       ) : (
-        'Une erreur est survenue'
+        "Une erreur est survenue"
       )}
     </div>
   );
