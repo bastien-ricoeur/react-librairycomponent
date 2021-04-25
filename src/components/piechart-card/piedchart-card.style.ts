@@ -1,6 +1,6 @@
 import { createUseStyles } from "react-jss";
 
-export default createUseStyles((_theme: any) => ({
+export default createUseStyles((theme: any) => ({
   root: {
     width: "100%",
     height: "100%",
@@ -17,4 +17,38 @@ export default createUseStyles((_theme: any) => ({
   chartContainer: {
     height: "calc(100% - 30px)",
   },
+  chardContainerSkeleton: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  skeletonAnimation: {
+    animation: "pulse 2s infinite ease-in-out",
+  },
+  chartLabelSkeleton: {
+    height: (props: { labelFontSize: number }) => props.labelFontSize + 2,
+    marginBottom: 8,
+    width: '85%',
+  },
+  chartSkeleton: {
+    position: 'relative'
+  },
+  firstChartMask: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    borderRadius: '50%'
+  },
+  secondChartMask: {
+    position: 'absolute',
+    borderRadius: '50%',
+    backgroundColor: '#ffffff',
+  },
+  errorIcon: {
+    fontSize: (props: { iconFontSize: number }) => props.iconFontSize
+  },
+  chartErrorSubContainer: {
+    textAlign: 'center',
+    color: theme.error
+  }
 }));

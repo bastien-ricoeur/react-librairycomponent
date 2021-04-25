@@ -2,6 +2,8 @@ import { Bar } from "react-chartjs-2";
 import Theme from "../../style/itheme";
 import useStyles from "./groupedbarchart-card.style";
 import { useTheme } from "react-jss";
+import GroupedBarChartErrorCard from "./error";
+import GroupedBarChartSkeletonCard from "./skeleton";
 
 export interface ChartData {
   label: string;
@@ -9,16 +11,22 @@ export interface ChartData {
 }
 
 export type GroupedBarChartCardProps = {
-  data: Array<ChartData>;
-  groupLabels: Array<string>;
-  label: string;
+  data?: Array<ChartData>;
+  groupLabels?: Array<string>;
+  label?: string;
+  loading?: boolean;
+  error?: boolean;
+  errorLabel?: string;
   size?: "small" | "medium" | "large";
 };
 
 const GroupedBarChartCard = ({
-  data,
-  groupLabels,
+  data = [],
+  groupLabels = [],
   label,
+  loading = false,
+  error = false,
+  errorLabel,
   size = "medium",
 }: GroupedBarChartCardProps) => {
   let labelFontSize = 0;
@@ -100,10 +108,22 @@ const GroupedBarChartCard = ({
 
   return (
     <div className={classes.root}>
-      <div className={classes.chartLabel}>{label}</div>
-      <div>
-        <Bar data={chartData} options={options} />
-      </div>
+      {!loading ? (
+        <>
+          {!error ? (
+            <>
+              <div className={classes.chartLabel}>{label}</div>
+              <div>
+                <Bar data={chartData} options={options} />
+              </div>
+            </>
+          ) : (
+            <GroupedBarChartErrorCard labelFontSize={labelFontSize} size={size} errorLabel={errorLabel} />
+          )}
+        </>
+      ) : (
+        <GroupedBarChartSkeletonCard labelFontSize={labelFontSize} />
+      )}
     </div>
   );
 };

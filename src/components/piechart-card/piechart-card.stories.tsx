@@ -1,4 +1,4 @@
-import { object, select, text, withKnobs } from "@storybook/addon-knobs";
+import { boolean, object, select, text, withKnobs } from "@storybook/addon-knobs";
 
 import PieChartCard from ".";
 import README from "./README.md";
@@ -36,7 +36,10 @@ stories.add(
       <div style={{ width: 700, height: 400 }}>
         <PieChartCard
           label={text("Label", "Grouped Bar Chart")}
-          data={object("data", data)}
+          data={object("Data", data)}
+          loading={boolean("Is loading", false)}
+          error={boolean("Error", false)}
+          errorLabel={text("Error label", "An error has occurrred")}
           size={select(
             "Card size",
             { Small: "small", Medium: "medium", Large: "large" },

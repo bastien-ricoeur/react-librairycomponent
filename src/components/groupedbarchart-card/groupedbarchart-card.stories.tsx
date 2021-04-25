@@ -1,4 +1,4 @@
-import { array, object, select, text, withKnobs } from "@storybook/addon-knobs";
+import { array, boolean, object, select, text, withKnobs } from "@storybook/addon-knobs";
 
 import GroupedBarChartCard from ".";
 import README from "./README.md";
@@ -38,8 +38,11 @@ stories.add(
       <div style={{ width: 700, height: 400 }}>
         <GroupedBarChartCard
           label={text("Label", "Grouped Bar Chart")}
-          data={object("data", data)}
-          groupLabels={array("groupLabels", groupLabels)}
+          data={object("Data", data)}
+          groupLabels={array("GroupLabels", groupLabels)}
+          loading={boolean("Is loading", false)}
+          error={boolean("Error", false)}
+          errorLabel={text("Error label", "An error has occurrred")}
           size={select(
             "Card size",
             { Small: "small", Medium: "medium", Large: "large" },

@@ -15,9 +15,13 @@ describe("ProgressBar", () => {
   describe("render()", () => {
     it("renders a progress bar", async () => {
       let container;
+      jest.useFakeTimers();
+
       act(() => {
         container = render(<ProgressBar {...props} />).container;
+        jest.advanceTimersByTime(2000);
       });
+
       expect(container.firstChild).toMatchInlineSnapshot(`
       <div
         class="root-0-2-1"
@@ -28,7 +32,7 @@ describe("ProgressBar", () => {
           <span
             class="label-0-2-3"
           >
-            %
+            90%
           </span>
         </div>
       </div>

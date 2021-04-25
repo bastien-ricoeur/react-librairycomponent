@@ -2,6 +2,10 @@ import { Doughnut } from "react-chartjs-2";
 import Theme from "../../style/itheme";
 import useStyles from "./piedchart-card.style";
 import { useTheme } from "react-jss";
+import "../../style/base.css";
+
+import PieChartSkeletonCard from './skeleton';
+import PieChartErrorCard from './error';
 
 export interface ChartData {
   label: string;
@@ -9,12 +13,15 @@ export interface ChartData {
 }
 
 export type PieChartCardProps = {
-  data: Array<ChartData>;
-  label: string;
+  data?: Array<ChartData>;
+  label?: string;
+  loading?: boolean;
+  error?: boolean;
+  errorLabel?: string;
   size?: "small" | "medium" | "large";
 };
 
-const PieChartCard = ({ data, label, size = "medium" }: PieChartCardProps) => {
+const PieChartCard = ({ data = [], label, loading = false, error = false, errorLabel, size = "medium" }: PieChartCardProps) => {
   let labelFontSize = 0;
 
   switch (size) {
@@ -62,16 +69,29 @@ const PieChartCard = ({ data, label, size = "medium" }: PieChartCardProps) => {
   const options = {
     maintainAspectRatio: false,
     animation: {
-      duration: 3000,
+      duration: 3000
     },
   };
 
   return (
     <div className={classes.root}>
-      <div className={classes.chartLabel}>{label}</div>
-      <div className={classes.chartContainer}>
-        <Doughnut data={chartData} options={options} />
-      </div>
+      {!loading ? (
+        <>
+          {!error ? (
+            <>
+              <div className={classes.chartLabel}>{label}</div>
+              <div className={classes.chartContainer}>
+                <Doughnut data={chartData} options={options} />
+              </div>
+            </>
+          ) : (
+            <PieChartErrorCard labelFontSize={labelFontSize} size={size} errorLabel={errorLabel} />
+          )}
+        </>
+      ) : (
+        <PieChartSkeletonCard labelFontSize={labelFontSize} />
+      )}
+
     </div>
   );
 };

@@ -22,9 +22,8 @@ const ProgressBar = ({ bgcolor, completed }: ProgressBarProps) => {
       {completed <= 100 && completed > 0 ? (
         <div className={classes.root}>
           <div className={classes.filler}>
-            <span className={classes.label}>{`${
-              currentCompleted || ""
-            }%`}</span>
+            <span className={classes.label}>{`${currentCompleted || ""
+              }%`}</span>
           </div>
         </div>
       ) : (

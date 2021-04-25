@@ -4,4 +4,5 @@ export default interface Theme {
   second: string;
   ligthSecond: string;
   grey: string;
+  error: string;
 }
