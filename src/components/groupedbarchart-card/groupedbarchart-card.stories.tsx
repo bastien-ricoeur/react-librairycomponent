@@ -1,4 +1,11 @@
-import { array, boolean, object, select, text, withKnobs } from "@storybook/addon-knobs";
+import {
+  array,
+  boolean,
+  object,
+  select,
+  text,
+  withKnobs,
+} from "@storybook/addon-knobs";
 
 import GroupedBarChartCard from ".";
 import README from "./README.md";

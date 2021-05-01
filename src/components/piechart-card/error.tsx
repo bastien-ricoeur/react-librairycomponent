@@ -1,8 +1,5 @@
+import { IoSadOutline } from "react-icons/io5";
 import useStyles from "./piedchart-card.style";
-
-import {
-  IoSadOutline
-} from "react-icons/io5";
 
 export type PieChartErrorCardProps = {
   labelFontSize: number;
@@ -13,9 +10,8 @@ export type PieChartErrorCardProps = {
 const PieChartErrorCard = ({
   labelFontSize,
   size,
-  errorLabel = 'Une erreur est survenue'
+  errorLabel = "Une erreur est survenue",
 }: PieChartErrorCardProps) => {
-
   let iconFontSize = 0;
 
   switch (size) {
@@ -32,15 +28,15 @@ const PieChartErrorCard = ({
 
   const classes = useStyles({ labelFontSize, iconFontSize });
 
-
   return (
-    <div className={`${classes.chartContainer} ${classes.chardContainerSkeleton}`}>
+    <div
+      className={`${classes.chartContainer} ${classes.chardContainerSkeleton}`}
+    >
       <div className={classes.chartErrorSubContainer}>
         <IoSadOutline className={classes.errorIcon} />
         <div>{errorLabel}</div>
       </div>
     </div>
-
   );
 };
 

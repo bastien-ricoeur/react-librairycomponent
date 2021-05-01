@@ -1,11 +1,11 @@
+import "../../style/base.css";
+
 import { Doughnut } from "react-chartjs-2";
+import PieChartErrorCard from "./error";
+import PieChartSkeletonCard from "./skeleton";
 import Theme from "../../style/itheme";
 import useStyles from "./piedchart-card.style";
 import { useTheme } from "react-jss";
-import "../../style/base.css";
-
-import PieChartSkeletonCard from './skeleton';
-import PieChartErrorCard from './error';
 
 export interface ChartData {
   label: string;
@@ -21,7 +21,14 @@ export type PieChartCardProps = {
   size?: "small" | "medium" | "large";
 };
 
-const PieChartCard = ({ data = [], label, loading = false, error = false, errorLabel, size = "medium" }: PieChartCardProps) => {
+const PieChartCard = ({
+  data = [],
+  label,
+  loading = false,
+  error = false,
+  errorLabel,
+  size = "medium",
+}: PieChartCardProps) => {
   let labelFontSize = 0;
 
   switch (size) {
@@ -69,7 +76,7 @@ const PieChartCard = ({ data = [], label, loading = false, error = false, errorL
   const options = {
     maintainAspectRatio: false,
     animation: {
-      duration: 3000
+      duration: 3000,
     },
   };
 
@@ -85,13 +92,16 @@ const PieChartCard = ({ data = [], label, loading = false, error = false, errorL
               </div>
             </>
           ) : (
-            <PieChartErrorCard labelFontSize={labelFontSize} size={size} errorLabel={errorLabel} />
+            <PieChartErrorCard
+              labelFontSize={labelFontSize}
+              size={size}
+              errorLabel={errorLabel}
+            />
           )}
         </>
       ) : (
         <PieChartSkeletonCard labelFontSize={labelFontSize} />
       )}
-
     </div>
   );
 };

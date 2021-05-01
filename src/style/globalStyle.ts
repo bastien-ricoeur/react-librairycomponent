@@ -4,5 +4,5 @@ export default {
   second: "#cfde00",
   ligthSecond: "#faffb3",
   grey: "#e0e0de",
-  error: "#e57373"
+  error: "#e57373",
 };

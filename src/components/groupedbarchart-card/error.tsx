@@ -1,8 +1,5 @@
-import useStyles from './groupedbarchart-card.style';
-
-import {
-  IoSadOutline
-} from "react-icons/io5";
+import { IoSadOutline } from "react-icons/io5";
+import useStyles from "./groupedbarchart-card.style";
 
 export type GroupedBarChartErrorCardProps = {
   labelFontSize: number;
@@ -13,9 +10,8 @@ export type GroupedBarChartErrorCardProps = {
 const GroupedBarChartErrorCard = ({
   labelFontSize,
   size,
-  errorLabel = 'Une erreur est survenue'
+  errorLabel = "Une erreur est survenue",
 }: GroupedBarChartErrorCardProps) => {
-
   let iconFontSize = 0;
 
   switch (size) {
@@ -32,7 +28,6 @@ const GroupedBarChartErrorCard = ({
 
   const classes = useStyles({ labelFontSize, iconFontSize });
 
-
   return (
     <div className={classes.chardContainerSkeleton}>
       <div className={classes.chartErrorSubContainer}>
@@ -40,7 +35,6 @@ const GroupedBarChartErrorCard = ({
         <div>{errorLabel}</div>
       </div>
     </div>
-
   );
 };
 

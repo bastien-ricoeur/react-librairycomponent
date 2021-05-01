@@ -23,32 +23,32 @@ export default createUseStyles((theme: any) => ({
   chartLabelSkeleton: {
     height: (props: { labelFontSize: number }) => props.labelFontSize + 2,
     marginBottom: 8,
-    width: '85%',
+    width: "85%",
   },
   chardContainerSkeleton: {
     height: "calc(100% - 60px)",
     width: "calc(100% - 30px)",
     marginTop: 30,
     paddingLeft: 30,
-    display: 'flex',
-    alignItems: 'flex-end',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "flex-end",
+    justifyContent: "center",
   },
   errorIcon: {
-    fontSize: (props: { iconFontSize: number }) => props.iconFontSize
+    fontSize: (props: { iconFontSize: number }) => props.iconFontSize,
   },
   chartErrorSubContainer: {
-    textAlign: 'center',
-    color: theme.error
+    textAlign: "center",
+    color: theme.error,
   },
   chartGroup: {
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    alignItems: 'flex-end',
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    alignItems: "flex-end",
   },
   barChart: {
     width: 18,
-    marginRight: 4
-  }
+    marginRight: 4,
+  },
 }));

@@ -18,9 +18,9 @@ export default createUseStyles((theme: any) => ({
     height: "calc(100% - 30px)",
   },
   chardContainerSkeleton: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   skeletonAnimation: {
     animation: "pulse 2s infinite ease-in-out",
@@ -28,27 +28,27 @@ export default createUseStyles((theme: any) => ({
   chartLabelSkeleton: {
     height: (props: { labelFontSize: number }) => props.labelFontSize + 2,
     marginBottom: 8,
-    width: '85%',
+    width: "85%",
   },
   chartSkeleton: {
-    position: 'relative'
+    position: "relative",
   },
   firstChartMask: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    borderRadius: '50%'
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    borderRadius: "50%",
   },
   secondChartMask: {
-    position: 'absolute',
-    borderRadius: '50%',
-    backgroundColor: '#ffffff',
+    position: "absolute",
+    borderRadius: "50%",
+    backgroundColor: "#ffffff",
   },
   errorIcon: {
-    fontSize: (props: { iconFontSize: number }) => props.iconFontSize
+    fontSize: (props: { iconFontSize: number }) => props.iconFontSize,
   },
   chartErrorSubContainer: {
-    textAlign: 'center',
-    color: theme.error
-  }
+    textAlign: "center",
+    color: theme.error,
+  },
 }));

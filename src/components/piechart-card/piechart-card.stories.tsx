@@ -1,4 +1,10 @@
-import { boolean, object, select, text, withKnobs } from "@storybook/addon-knobs";
+import {
+  boolean,
+  object,
+  select,
+  text,
+  withKnobs,
+} from "@storybook/addon-knobs";
 
 import PieChartCard from ".";
 import README from "./README.md";
