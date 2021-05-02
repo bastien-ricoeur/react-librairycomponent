@@ -1,48 +1,51 @@
-import PieChartCard, { PieChartCardProps } from ".";
+import GroupedBarChartCard, { GroupedBarChartCardProps } from ".";
 import { act, render } from "@testing-library/react";
 
 import React from "react";
 import { ThemeProvider } from "react-jss";
 import theme from "../../style/globalStyle";
 
-describe("PieChartCard", () => {
-  let props: PieChartCardProps;
+describe("GroupedBarChartCard", () => {
+  let props: GroupedBarChartCardProps;
   const data = [
     {
-      label: "Production",
-      data: 81,
+      label: "Dataset 1",
+      data: [12, 19, 3, 5, 2, 3],
     },
     {
-      label: "Interne",
-      data: 10,
+      label: "Dataset 2",
+      data: [2, 3, 20, 5, 1, 4],
     },
     {
-      label: "Commercial",
-      data: 6,
+      label: "Dataset 3",
+      data: [3, 10, 13, 15, 22, 30],
     },
     {
-      label: "Veille techno",
-      data: 3,
+      label: "Dataset 4",
+      data: [8, 1, 3, 15, 22, 9],
     },
   ];
+
+  const groupLabels = ["1", "2", "3", "4", "5", "6"];
 
   beforeEach(() => {
     props = {
       data: data,
+      groupLabels: groupLabels,
       label: "Test label",
     };
     jest.spyOn(console, 'error').mockImplementation(() => { });
   });
 
   describe("render()", () => {
-    it("renders a medium piechart card", async () => {
+    it("renders a medium groupedbarchart card", async () => {
       let container;
       jest.useFakeTimers();
 
       act(() => {
         container = render(
           <ThemeProvider theme={theme}>
-            <PieChartCard {...props} />
+            <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
         jest.advanceTimersByTime(3000);
@@ -53,13 +56,11 @@ describe("PieChartCard", () => {
         class="root-0-2-1"
       >
         <div
-          class="chartLabel-0-2-2 chartLabel-d0-0-2-12"
+          class="chartLabel-0-2-2 chartLabel-d0-0-2-11"
         >
           Test label
         </div>
-        <div
-          class="chartContainer-0-2-3"
-        >
+        <div>
           <canvas
             height="150"
             width="300"
@@ -69,7 +70,7 @@ describe("PieChartCard", () => {
       `);
     });
 
-    it("renders a small piechart card", async () => {
+    it("renders a small groupedbarchart card", async () => {
       props.size = "small";
 
       let container;
@@ -78,7 +79,7 @@ describe("PieChartCard", () => {
       act(() => {
         container = render(
           <ThemeProvider theme={theme}>
-            <PieChartCard {...props} />
+            <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
         jest.advanceTimersByTime(3000);
@@ -89,13 +90,11 @@ describe("PieChartCard", () => {
         class="root-0-2-1"
       >
         <div
-          class="chartLabel-0-2-2 chartLabel-d3-0-2-15"
+          class="chartLabel-0-2-2 chartLabel-d3-0-2-14"
         >
           Test label
         </div>
-        <div
-          class="chartContainer-0-2-3"
-        >
+        <div>
           <canvas
             height="150"
             width="300"
@@ -105,7 +104,7 @@ describe("PieChartCard", () => {
       `);
     });
 
-    it("renders a large piechart card", async () => {
+    it("renders a large groupedbarchart card", async () => {
       props.size = "large";
 
       let container;
@@ -114,7 +113,7 @@ describe("PieChartCard", () => {
       act(() => {
         container = render(
           <ThemeProvider theme={theme}>
-            <PieChartCard {...props} />
+            <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
         jest.advanceTimersByTime(3000);
@@ -125,13 +124,11 @@ describe("PieChartCard", () => {
         class="root-0-2-1"
       >
         <div
-          class="chartLabel-0-2-2 chartLabel-d6-0-2-18"
+          class="chartLabel-0-2-2 chartLabel-d6-0-2-17"
         >
           Test label
         </div>
-        <div
-          class="chartContainer-0-2-3"
-        >
+        <div>
           <canvas
             height="150"
             width="300"
@@ -141,7 +138,7 @@ describe("PieChartCard", () => {
       `);
     });
 
-    it("renders piechart card loading display", async () => {
+    it("renders groupedbarchart card loading display", async () => {
       props.loading = true;
 
       let container;
@@ -150,7 +147,7 @@ describe("PieChartCard", () => {
       act(() => {
         container = render(
           <ThemeProvider theme={theme}>
-            <PieChartCard {...props} />
+            <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
         jest.advanceTimersByTime(3000);
@@ -161,21 +158,89 @@ describe("PieChartCard", () => {
           class="root-0-2-1"
         >
           <div
-            class="chartLabel-0-2-2 chartLabel-d12-0-2-24 skeletonAnimation-0-2-5 chartLabelSkeleton-0-2-6 chartLabelSkeleton-d13-0-2-25"
+            class="chartLabel-0-2-2 chartLabel-d12-0-2-23 skeletonAnimation-0-2-3 chartLabelSkeleton-0-2-5 chartLabelSkeleton-d13-0-2-24"
           />
           <div
-            class="chartContainer-0-2-3 chardContainerSkeleton-0-2-4"
+            class="chardContainerSkeleton-0-2-6 skeletonBorderAnimation-0-2-4"
           >
             <div
-              class="chartSkeleton-0-2-7 "
-              style="width: 0px; height: 0px;"
+              class="chartGroup-0-2-9"
             >
               <div
-                class="skeletonAnimation-0-2-5 firstChartMask-0-2-8"
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 40%;"
               />
               <div
-                class="secondChartMask-0-2-9"
-                style="width: 0px; height: 0px; top: 0px; left: 0px;"
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 20%;"
+              />
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 70%;"
+              />
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 49%;"
+              />
+            </div>
+            <div
+              class="chartGroup-0-2-9"
+            >
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 22%;"
+              />
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 78%;"
+              />
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 47%;"
+              />
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 54%;"
+              />
+            </div>
+            <div
+              class="chartGroup-0-2-9"
+            >
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 47%;"
+              />
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 36%;"
+              />
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 22%;"
+              />
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 80%;"
+              />
+            </div>
+            <div
+              class="chartGroup-0-2-9"
+            >
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 18%;"
+              />
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 37%;"
+              />
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 74%;"
+              />
+              <div
+                class="barChart-0-2-10 skeletonAnimation-0-2-3"
+                style="height: 66%;"
               />
             </div>
           </div>
@@ -183,7 +248,7 @@ describe("PieChartCard", () => {
       `);
     });
 
-    it("renders medium piechart card error display with default error label", async () => {
+    it("renders medium groupedbarchart card error display with default error label", async () => {
       props.loading = false;
       props.error = true;
       props.size = "medium";
@@ -194,7 +259,7 @@ describe("PieChartCard", () => {
       act(() => {
         container = render(
           <ThemeProvider theme={theme}>
-            <PieChartCard {...props} />
+            <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
         jest.advanceTimersByTime(3000);
@@ -205,13 +270,13 @@ describe("PieChartCard", () => {
         class="root-0-2-1"
       >
         <div
-          class="chartContainer-0-2-3 chardContainerSkeleton-0-2-4"
+          class="chardContainerSkeleton-0-2-6"
         >
           <div
-            class="chartErrorSubContainer-0-2-11"
+            class="chartErrorSubContainer-0-2-8"
           >
             <svg
-              class="errorIcon-0-2-10 errorIcon-d20-0-2-32"
+              class="errorIcon-0-2-7 errorIcon-d20-0-2-31"
               fill="currentColor"
               height="1em"
               stroke="currentColor"
@@ -251,7 +316,7 @@ describe("PieChartCard", () => {
       `);
     });
 
-    it("renders large piechart card error display with default error label", async () => {
+    it("renders large groupedbarchart card error display with default error label", async () => {
       props.loading = false;
       props.error = true;
       props.size = "large";
@@ -262,7 +327,7 @@ describe("PieChartCard", () => {
       act(() => {
         container = render(
           <ThemeProvider theme={theme}>
-            <PieChartCard {...props} />
+            <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
         jest.advanceTimersByTime(3000);
@@ -273,13 +338,13 @@ describe("PieChartCard", () => {
         class="root-0-2-1"
       >
         <div
-          class="chartContainer-0-2-3 chardContainerSkeleton-0-2-4"
+          class="chardContainerSkeleton-0-2-6"
         >
           <div
-            class="chartErrorSubContainer-0-2-11"
+            class="chartErrorSubContainer-0-2-8"
           >
             <svg
-              class="errorIcon-0-2-10 errorIcon-d26-0-2-38"
+              class="errorIcon-0-2-7 errorIcon-d26-0-2-37"
               fill="currentColor"
               height="1em"
               stroke="currentColor"
@@ -319,7 +384,7 @@ describe("PieChartCard", () => {
       `);
     });
 
-    it("renders small piechart card error display with default error label", async () => {
+    it("renders small groupedbarchart card error display with default error label", async () => {
       props.loading = false;
       props.error = true;
       props.size = "small";
@@ -330,7 +395,7 @@ describe("PieChartCard", () => {
       act(() => {
         container = render(
           <ThemeProvider theme={theme}>
-            <PieChartCard {...props} />
+            <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
         jest.advanceTimersByTime(3000);
@@ -341,13 +406,13 @@ describe("PieChartCard", () => {
         class="root-0-2-1"
       >
         <div
-          class="chartContainer-0-2-3 chardContainerSkeleton-0-2-4"
+          class="chardContainerSkeleton-0-2-6"
         >
           <div
-            class="chartErrorSubContainer-0-2-11"
+            class="chartErrorSubContainer-0-2-8"
           >
             <svg
-              class="errorIcon-0-2-10 errorIcon-d32-0-2-44"
+              class="errorIcon-0-2-7 errorIcon-d32-0-2-43"
               fill="currentColor"
               height="1em"
               stroke="currentColor"
@@ -387,7 +452,7 @@ describe("PieChartCard", () => {
       `);
     });
 
-    it("renders piechart card error display with custom error label", async () => {
+    it("renders groupedbarchart card error display with custom error label", async () => {
       props.loading = false;
       props.error = true;
       props.errorLabel = "Test error label";
@@ -398,7 +463,7 @@ describe("PieChartCard", () => {
       act(() => {
         container = render(
           <ThemeProvider theme={theme}>
-            <PieChartCard {...props} />
+            <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
         jest.advanceTimersByTime(3000);
@@ -409,13 +474,13 @@ describe("PieChartCard", () => {
         class="root-0-2-1"
       >
         <div
-          class="chartContainer-0-2-3 chardContainerSkeleton-0-2-4"
+          class="chardContainerSkeleton-0-2-6"
         >
           <div
-            class="chartErrorSubContainer-0-2-11"
+            class="chartErrorSubContainer-0-2-8"
           >
             <svg
-              class="errorIcon-0-2-10 errorIcon-d38-0-2-50"
+              class="errorIcon-0-2-7 errorIcon-d38-0-2-49"
               fill="currentColor"
               height="1em"
               stroke="currentColor"
