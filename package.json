@@ -1,7 +1,7 @@
 {
   "name": "@bastienricoeur/components",
   "description": "React Component Library",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "private": false,
   "main": "lib/index.js",
   "license": "MIT",

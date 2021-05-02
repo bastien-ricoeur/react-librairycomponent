@@ -9,10 +9,10 @@ import {
 
 import { IconName } from "../../enums/icon-name";
 import ProgressBar from "../progress-bar";
+import ProgressBarErrorCard from "./error";
 import ProgressBarSkeletonCard from "./skeleton";
 import { ReactElement } from "react";
 import useStyles from "./progressbar-card.style";
-import ProgressBarErrorCard from './error';
 
 export type ProgressBarCardProps = {
   completed?: number;
@@ -93,7 +93,7 @@ const ProgressBarCard = ({
     <div className={classes.root}>
       {!loading && completed <= total ? (
         <>
-          { !error ? (
+          {!error ? (
             <div className={classes.card}>
               <div className={classes.iconContainer}>{renderIcon(icon)}</div>
               <div className={classes.cardContent}>
@@ -112,9 +112,11 @@ const ProgressBarCard = ({
               </div>
             </div>
           ) : (
-            <ProgressBarErrorCard labelFontSize={labelFontSize}
+            <ProgressBarErrorCard
+              labelFontSize={labelFontSize}
               size={size}
-              errorLabel={errorLabel} />
+              errorLabel={errorLabel}
+            />
           )}
         </>
       ) : (

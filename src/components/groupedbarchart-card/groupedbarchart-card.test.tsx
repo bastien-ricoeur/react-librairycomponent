@@ -34,7 +34,7 @@ describe("GroupedBarChartCard", () => {
       groupLabels: groupLabels,
       label: "Test label",
     };
-    jest.spyOn(console, "error").mockImplementation(() => { });
+    jest.spyOn(console, "error").mockImplementation(() => {});
   });
 
   describe("render()", () => {

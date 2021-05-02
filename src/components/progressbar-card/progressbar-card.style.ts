@@ -21,7 +21,7 @@ export default createUseStyles((theme: any) => ({
   },
   cardError: {
     width: "100%",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   iconContainer: {
     width: (props: { widthHeightIcon: number }) => props.widthHeightIcon,
@@ -71,5 +71,5 @@ export default createUseStyles((theme: any) => ({
   chartErrorSubContainer: {
     textAlign: "center",
     color: theme.error,
-  }
+  },
 }));

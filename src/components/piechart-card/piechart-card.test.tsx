@@ -31,7 +31,7 @@ describe("PieChartCard", () => {
       data: data,
       label: "Test label",
     };
-    jest.spyOn(console, "error").mockImplementation(() => { });
+    jest.spyOn(console, "error").mockImplementation(() => {});
   });
 
   describe("render()", () => {
