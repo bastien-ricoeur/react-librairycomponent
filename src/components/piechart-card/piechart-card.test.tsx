@@ -31,7 +31,7 @@ describe("PieChartCard", () => {
       data: data,
       label: "Test label",
     };
-    jest.spyOn(console, 'error').mockImplementation(() => { });
+    jest.spyOn(console, "error").mockImplementation(() => { });
   });
 
   describe("render()", () => {
@@ -145,7 +145,6 @@ describe("PieChartCard", () => {
       props.loading = true;
 
       let container;
-      jest.useFakeTimers();
 
       act(() => {
         container = render(
@@ -153,7 +152,6 @@ describe("PieChartCard", () => {
             <PieChartCard {...props} />
           </ThemeProvider>
         ).container;
-        jest.advanceTimersByTime(3000);
       });
 
       expect(container.firstChild).toMatchInlineSnapshot(`
@@ -189,7 +187,6 @@ describe("PieChartCard", () => {
       props.size = "medium";
 
       let container;
-      jest.useFakeTimers();
 
       act(() => {
         container = render(
@@ -197,7 +194,6 @@ describe("PieChartCard", () => {
             <PieChartCard {...props} />
           </ThemeProvider>
         ).container;
-        jest.advanceTimersByTime(3000);
       });
 
       expect(container.firstChild).toMatchInlineSnapshot(`
@@ -257,7 +253,6 @@ describe("PieChartCard", () => {
       props.size = "large";
 
       let container;
-      jest.useFakeTimers();
 
       act(() => {
         container = render(
@@ -265,7 +260,6 @@ describe("PieChartCard", () => {
             <PieChartCard {...props} />
           </ThemeProvider>
         ).container;
-        jest.advanceTimersByTime(3000);
       });
 
       expect(container.firstChild).toMatchInlineSnapshot(`
@@ -325,7 +319,6 @@ describe("PieChartCard", () => {
       props.size = "small";
 
       let container;
-      jest.useFakeTimers();
 
       act(() => {
         container = render(
@@ -333,7 +326,6 @@ describe("PieChartCard", () => {
             <PieChartCard {...props} />
           </ThemeProvider>
         ).container;
-        jest.advanceTimersByTime(3000);
       });
 
       expect(container.firstChild).toMatchInlineSnapshot(`
@@ -393,7 +385,6 @@ describe("PieChartCard", () => {
       props.errorLabel = "Test error label";
 
       let container;
-      jest.useFakeTimers();
 
       act(() => {
         container = render(
@@ -401,7 +392,6 @@ describe("PieChartCard", () => {
             <PieChartCard {...props} />
           </ThemeProvider>
         ).container;
-        jest.advanceTimersByTime(3000);
       });
 
       expect(container.firstChild).toMatchInlineSnapshot(`

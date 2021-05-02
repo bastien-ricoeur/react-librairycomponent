@@ -26,7 +26,9 @@ stories.add(
         completed={number("Completed", 2)}
         total={number("Total", 4)}
         label={text("Label", "Brown Bag Lunch")}
-        isLoading={boolean("Is loading", false)}
+        loading={boolean("Is loading", false)}
+        error={boolean("Error", false)}
+        errorLabel={text("Error label", "An error has occurrred")}
         icon={select(
           "Icon name",
           {

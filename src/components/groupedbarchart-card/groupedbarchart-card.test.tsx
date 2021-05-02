@@ -34,7 +34,7 @@ describe("GroupedBarChartCard", () => {
       groupLabels: groupLabels,
       label: "Test label",
     };
-    jest.spyOn(console, 'error').mockImplementation(() => { });
+    jest.spyOn(console, "error").mockImplementation(() => { });
   });
 
   describe("render()", () => {
@@ -142,7 +142,6 @@ describe("GroupedBarChartCard", () => {
       props.loading = true;
 
       let container;
-      jest.useFakeTimers();
 
       act(() => {
         container = render(
@@ -150,7 +149,6 @@ describe("GroupedBarChartCard", () => {
             <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
-        jest.advanceTimersByTime(3000);
       });
 
       expect(container.firstChild).toMatchInlineSnapshot(`
@@ -254,7 +252,6 @@ describe("GroupedBarChartCard", () => {
       props.size = "medium";
 
       let container;
-      jest.useFakeTimers();
 
       act(() => {
         container = render(
@@ -262,7 +259,6 @@ describe("GroupedBarChartCard", () => {
             <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
-        jest.advanceTimersByTime(3000);
       });
 
       expect(container.firstChild).toMatchInlineSnapshot(`
@@ -322,7 +318,6 @@ describe("GroupedBarChartCard", () => {
       props.size = "large";
 
       let container;
-      jest.useFakeTimers();
 
       act(() => {
         container = render(
@@ -330,7 +325,6 @@ describe("GroupedBarChartCard", () => {
             <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
-        jest.advanceTimersByTime(3000);
       });
 
       expect(container.firstChild).toMatchInlineSnapshot(`
@@ -390,7 +384,6 @@ describe("GroupedBarChartCard", () => {
       props.size = "small";
 
       let container;
-      jest.useFakeTimers();
 
       act(() => {
         container = render(
@@ -398,7 +391,6 @@ describe("GroupedBarChartCard", () => {
             <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
-        jest.advanceTimersByTime(3000);
       });
 
       expect(container.firstChild).toMatchInlineSnapshot(`
@@ -458,7 +450,6 @@ describe("GroupedBarChartCard", () => {
       props.errorLabel = "Test error label";
 
       let container;
-      jest.useFakeTimers();
 
       act(() => {
         container = render(
@@ -466,7 +457,6 @@ describe("GroupedBarChartCard", () => {
             <GroupedBarChartCard {...props} />
           </ThemeProvider>
         ).container;
-        jest.advanceTimersByTime(3000);
       });
 
       expect(container.firstChild).toMatchInlineSnapshot(`

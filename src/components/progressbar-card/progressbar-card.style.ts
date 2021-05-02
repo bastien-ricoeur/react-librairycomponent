@@ -19,6 +19,10 @@ export default createUseStyles((theme: any) => ({
     alignItems: "center",
     justifyContent: "space-between",
   },
+  cardError: {
+    width: "100%",
+    justifyContent: "center"
+  },
   iconContainer: {
     width: (props: { widthHeightIcon: number }) => props.widthHeightIcon,
     height: (props: { widthHeightIcon: number }) => props.widthHeightIcon,
@@ -61,4 +65,11 @@ export default createUseStyles((theme: any) => ({
     height: (props: { labelFontSize: number }) => props.labelFontSize - 4,
     fontSize: 0,
   },
+  errorIcon: {
+    fontSize: (props: { iconFontSize: number }) => props.iconFontSize,
+  },
+  chartErrorSubContainer: {
+    textAlign: "center",
+    color: theme.error,
+  }
 }));

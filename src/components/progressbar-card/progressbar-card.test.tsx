@@ -34,7 +34,7 @@ describe("ProgressBarCard", () => {
           class="card-0-2-2"
         >
           <div
-            class="iconContainer-0-2-3 iconContainer-d0-0-2-11"
+            class="iconContainer-0-2-4 iconContainer-d0-0-2-14"
           >
             <svg
               fill="currentColor"
@@ -54,15 +54,15 @@ describe("ProgressBarCard", () => {
             </svg>
           </div>
           <div
-            class="cardContent-0-2-5 cardContent-d1-0-2-12"
+            class="cardContent-0-2-6 cardContent-d1-0-2-15"
           >
             <div
-              class="cardLabel-0-2-6 cardLabel-d2-0-2-13"
+              class="cardLabel-0-2-7 cardLabel-d2-0-2-16"
             >
               Test label
             </div>
             <div
-              class="cardDescritpion-0-2-8 cardDescritpion-d4-0-2-15"
+              class="cardDescritpion-0-2-9 cardDescritpion-d4-0-2-18"
             >
               9
                / 
@@ -70,13 +70,13 @@ describe("ProgressBarCard", () => {
             </div>
             <div>
               <div
-                class="root-0-2-18"
+                class="root-0-2-22"
               >
                 <div
-                  class="filler-0-2-19 filler-d0-0-2-21"
+                  class="filler-0-2-23 filler-d0-0-2-25"
                 >
                   <span
-                    class="label-0-2-20"
+                    class="label-0-2-24"
                   >
                     90%
                   </span>
@@ -108,7 +108,7 @@ describe("ProgressBarCard", () => {
           class="card-0-2-2"
         >
           <div
-            class="iconContainer-0-2-3 iconContainer-d7-0-2-22"
+            class="iconContainer-0-2-4 iconContainer-d8-0-2-26"
           >
             <svg
               fill="currentColor"
@@ -128,22 +128,22 @@ describe("ProgressBarCard", () => {
             </svg>
           </div>
           <div
-            class="cardContent-0-2-5 cardContent-d8-0-2-23"
+            class="cardContent-0-2-6 cardContent-d9-0-2-27"
           >
             <div
-              class="cardLabel-0-2-6 cardLabel-d9-0-2-24"
+              class="cardLabel-0-2-7 cardLabel-d10-0-2-28"
             >
               Test label
             </div>
             <div>
               <div
-                class="root-0-2-18"
+                class="root-0-2-22"
               >
                 <div
-                  class="filler-0-2-19 filler-d1-0-2-29"
+                  class="filler-0-2-23 filler-d1-0-2-34"
                 >
                   <span
-                    class="label-0-2-20"
+                    class="label-0-2-24"
                   >
                     90%
                   </span>
@@ -175,7 +175,7 @@ describe("ProgressBarCard", () => {
           class="card-0-2-2"
         >
           <div
-            class="iconContainer-0-2-3 iconContainer-d14-0-2-30"
+            class="iconContainer-0-2-4 iconContainer-d16-0-2-35"
           >
             <svg
               fill="currentColor"
@@ -195,15 +195,15 @@ describe("ProgressBarCard", () => {
             </svg>
           </div>
           <div
-            class="cardContent-0-2-5 cardContent-d15-0-2-31"
+            class="cardContent-0-2-6 cardContent-d17-0-2-36"
           >
             <div
-              class="cardLabel-0-2-6 cardLabel-d16-0-2-32"
+              class="cardLabel-0-2-7 cardLabel-d18-0-2-37"
             >
               Test label
             </div>
             <div
-              class="cardDescritpion-0-2-8 cardDescritpion-d18-0-2-34"
+              class="cardDescritpion-0-2-9 cardDescritpion-d20-0-2-39"
             >
               9
                / 
@@ -211,13 +211,13 @@ describe("ProgressBarCard", () => {
             </div>
             <div>
               <div
-                class="root-0-2-18"
+                class="root-0-2-22"
               >
                 <div
-                  class="filler-0-2-19 filler-d2-0-2-37"
+                  class="filler-0-2-23 filler-d2-0-2-43"
                 >
                   <span
-                    class="label-0-2-20"
+                    class="label-0-2-24"
                   >
                     90%
                   </span>
@@ -250,7 +250,7 @@ describe("ProgressBarCard", () => {
           class="card-0-2-2"
         >
           <div
-            class="iconContainer-0-2-3 iconContainer-d21-0-2-38"
+            class="iconContainer-0-2-4 iconContainer-d24-0-2-44"
           >
             <svg
               fill="currentColor"
@@ -267,15 +267,15 @@ describe("ProgressBarCard", () => {
             </svg>
           </div>
           <div
-            class="cardContent-0-2-5 cardContent-d22-0-2-39"
+            class="cardContent-0-2-6 cardContent-d25-0-2-45"
           >
             <div
-              class="cardLabel-0-2-6 cardLabel-d23-0-2-40"
+              class="cardLabel-0-2-7 cardLabel-d26-0-2-46"
             >
               Test label
             </div>
             <div
-              class="cardDescritpion-0-2-8 cardDescritpion-d25-0-2-42"
+              class="cardDescritpion-0-2-9 cardDescritpion-d28-0-2-48"
             >
               9
                / 
@@ -283,13 +283,13 @@ describe("ProgressBarCard", () => {
             </div>
             <div>
               <div
-                class="root-0-2-18"
+                class="root-0-2-22"
               >
                 <div
-                  class="filler-0-2-19 filler-d3-0-2-45"
+                  class="filler-0-2-23 filler-d3-0-2-52"
                 >
                   <span
-                    class="label-0-2-20"
+                    class="label-0-2-24"
                   >
                     90%
                   </span>
@@ -322,7 +322,7 @@ describe("ProgressBarCard", () => {
           class="card-0-2-2"
         >
           <div
-            class="iconContainer-0-2-3 iconContainer-d28-0-2-46"
+            class="iconContainer-0-2-4 iconContainer-d32-0-2-53"
           >
             <svg
               fill="currentColor"
@@ -342,15 +342,15 @@ describe("ProgressBarCard", () => {
             </svg>
           </div>
           <div
-            class="cardContent-0-2-5 cardContent-d29-0-2-47"
+            class="cardContent-0-2-6 cardContent-d33-0-2-54"
           >
             <div
-              class="cardLabel-0-2-6 cardLabel-d30-0-2-48"
+              class="cardLabel-0-2-7 cardLabel-d34-0-2-55"
             >
               Test label
             </div>
             <div
-              class="cardDescritpion-0-2-8 cardDescritpion-d32-0-2-50"
+              class="cardDescritpion-0-2-9 cardDescritpion-d36-0-2-57"
             >
               9
                / 
@@ -358,13 +358,13 @@ describe("ProgressBarCard", () => {
             </div>
             <div>
               <div
-                class="root-0-2-18"
+                class="root-0-2-22"
               >
                 <div
-                  class="filler-0-2-19 filler-d4-0-2-53"
+                  class="filler-0-2-23 filler-d4-0-2-61"
                 >
                   <span
-                    class="label-0-2-20"
+                    class="label-0-2-24"
                   >
                     90%
                   </span>
@@ -397,7 +397,7 @@ describe("ProgressBarCard", () => {
           class="card-0-2-2"
         >
           <div
-            class="iconContainer-0-2-3 iconContainer-d35-0-2-54"
+            class="iconContainer-0-2-4 iconContainer-d40-0-2-62"
           >
             <svg
               fill="currentColor"
@@ -414,15 +414,15 @@ describe("ProgressBarCard", () => {
             </svg>
           </div>
           <div
-            class="cardContent-0-2-5 cardContent-d36-0-2-55"
+            class="cardContent-0-2-6 cardContent-d41-0-2-63"
           >
             <div
-              class="cardLabel-0-2-6 cardLabel-d37-0-2-56"
+              class="cardLabel-0-2-7 cardLabel-d42-0-2-64"
             >
               Test label
             </div>
             <div
-              class="cardDescritpion-0-2-8 cardDescritpion-d39-0-2-58"
+              class="cardDescritpion-0-2-9 cardDescritpion-d44-0-2-66"
             >
               9
                / 
@@ -430,13 +430,13 @@ describe("ProgressBarCard", () => {
             </div>
             <div>
               <div
-                class="root-0-2-18"
+                class="root-0-2-22"
               >
                 <div
-                  class="filler-0-2-19 filler-d5-0-2-61"
+                  class="filler-0-2-23 filler-d5-0-2-70"
                 >
                   <span
-                    class="label-0-2-20"
+                    class="label-0-2-24"
                   >
                     90%
                   </span>
@@ -450,14 +450,12 @@ describe("ProgressBarCard", () => {
     });
 
     it("renders progressbar card loading display", async () => {
-      props.isLoading = true;
+      props.loading = true;
 
       let container;
-      jest.useFakeTimers();
 
       act(() => {
         container = render(<ProgressBarCard {...props} />).container;
-        jest.advanceTimersByTime(2000);
       });
 
       expect(container.firstChild).toMatchInlineSnapshot(`
@@ -471,21 +469,285 @@ describe("ProgressBarCard", () => {
             class="card-0-2-2"
           >
             <div
-              class="iconContainer-0-2-3 iconContainer-d49-0-2-69 skeletonAnimation-0-2-4"
+              class="iconContainer-0-2-4 iconContainer-d56-0-2-79 skeletonAnimation-0-2-5"
             />
             <div
-              class="cardContent-0-2-5 cardContent-d50-0-2-70"
+              class="cardContent-0-2-6 cardContent-d57-0-2-80"
             >
               <div
-                class="cardLabel-0-2-6 cardLabel-d51-0-2-71 skeletonAnimation-0-2-4 cardLabelSkeleton-0-2-7 cardLabelSkeleton-d52-0-2-72"
+                class="cardLabel-0-2-7 cardLabel-d58-0-2-81 skeletonAnimation-0-2-5 cardLabelSkeleton-0-2-8 cardLabelSkeleton-d59-0-2-82"
               />
               <div
-                class="cardDescritpion-0-2-8 cardDescritpion-d53-0-2-73 skeletonAnimation-0-2-4 cardDescritpionSkeleton-0-2-9 cardDescritpionSkeleton-d54-0-2-74"
+                class="cardDescritpion-0-2-9 cardDescritpion-d60-0-2-83 skeletonAnimation-0-2-5 cardDescritpionSkeleton-0-2-10 cardDescritpionSkeleton-d61-0-2-84"
               />
               <div
-                class="skeletonAnimation-0-2-4 cardProgressBarSkeleton-0-2-10 cardProgressBarSkeleton-d55-0-2-75"
+                class="skeletonAnimation-0-2-5 cardProgressBarSkeleton-0-2-11 cardProgressBarSkeleton-d62-0-2-85"
               >
                 ProgressBar
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `);
+    });
+
+    it("renders medium progressbar card error display with default error label", async () => {
+      props.loading = false;
+      props.error = true;
+      props.size = "medium";
+
+      let container;
+
+      act(() => {
+        container = render(<ProgressBarCard {...props} />).container;
+      });
+
+      expect(container.firstChild).toMatchInlineSnapshot(`
+      <div
+        class="root-0-2-1"
+      >
+        <div
+          class="root-0-2-1"
+        >
+          <div
+            class="card-0-2-2 cardError-0-2-3"
+          >
+            <div
+              class="chartErrorSubContainer-0-2-13"
+            >
+              <svg
+                class="errorIcon-0-2-12 errorIcon-d79-0-2-102"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="184"
+                  cy="232"
+                  r="24"
+                />
+                <path
+                  d="M256 288c45.42 0 83.62 29.53 95.71 69.83a8 8 0 01-7.87 10.17H168.15a8 8 0 01-7.82-10.17C172.32 317.53 210.53 288 256 288z"
+                />
+                <circle
+                  cx="328"
+                  cy="232"
+                  r="24"
+                />
+                <circle
+                  cx="256"
+                  cy="256"
+                  fill="none"
+                  r="208"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                />
+              </svg>
+              <div>
+                Une erreur est survenue
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `);
+    });
+
+    it("renders large progressbar card error display with default error label", async () => {
+      props.loading = false;
+      props.error = true;
+      props.size = "large";
+
+      let container;
+
+      act(() => {
+        container = render(<ProgressBarCard {...props} />).container;
+      });
+
+      expect(container.firstChild).toMatchInlineSnapshot(`
+      <div
+        class="root-0-2-1"
+      >
+        <div
+          class="root-0-2-1"
+        >
+          <div
+            class="card-0-2-2 cardError-0-2-3"
+          >
+            <div
+              class="chartErrorSubContainer-0-2-13"
+            >
+              <svg
+                class="errorIcon-0-2-12 errorIcon-d95-0-2-118"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="184"
+                  cy="232"
+                  r="24"
+                />
+                <path
+                  d="M256 288c45.42 0 83.62 29.53 95.71 69.83a8 8 0 01-7.87 10.17H168.15a8 8 0 01-7.82-10.17C172.32 317.53 210.53 288 256 288z"
+                />
+                <circle
+                  cx="328"
+                  cy="232"
+                  r="24"
+                />
+                <circle
+                  cx="256"
+                  cy="256"
+                  fill="none"
+                  r="208"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                />
+              </svg>
+              <div>
+                Une erreur est survenue
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `);
+    });
+
+    it("renders small progressbar card error display with default error label", async () => {
+      props.loading = false;
+      props.error = true;
+      props.size = "small";
+
+      let container;
+
+      act(() => {
+        container = render(<ProgressBarCard {...props} />).container;
+      });
+
+      expect(container.firstChild).toMatchInlineSnapshot(`
+      <div
+        class="root-0-2-1"
+      >
+        <div
+          class="root-0-2-1"
+        >
+          <div
+            class="card-0-2-2 cardError-0-2-3"
+          >
+            <div
+              class="chartErrorSubContainer-0-2-13"
+            >
+              <svg
+                class="errorIcon-0-2-12 errorIcon-d111-0-2-134"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="184"
+                  cy="232"
+                  r="24"
+                />
+                <path
+                  d="M256 288c45.42 0 83.62 29.53 95.71 69.83a8 8 0 01-7.87 10.17H168.15a8 8 0 01-7.82-10.17C172.32 317.53 210.53 288 256 288z"
+                />
+                <circle
+                  cx="328"
+                  cy="232"
+                  r="24"
+                />
+                <circle
+                  cx="256"
+                  cy="256"
+                  fill="none"
+                  r="208"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                />
+              </svg>
+              <div>
+                Une erreur est survenue
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `);
+    });
+
+    it("renders progressbar card error display with custom error label", async () => {
+      props.loading = false;
+      props.error = true;
+      props.errorLabel = "Test error label";
+
+      let container;
+
+      act(() => {
+        container = render(<ProgressBarCard {...props} />).container;
+      });
+
+      expect(container.firstChild).toMatchInlineSnapshot(`
+      <div
+        class="root-0-2-1"
+      >
+        <div
+          class="root-0-2-1"
+        >
+          <div
+            class="card-0-2-2 cardError-0-2-3"
+          >
+            <div
+              class="chartErrorSubContainer-0-2-13"
+            >
+              <svg
+                class="errorIcon-0-2-12 errorIcon-d127-0-2-150"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="184"
+                  cy="232"
+                  r="24"
+                />
+                <path
+                  d="M256 288c45.42 0 83.62 29.53 95.71 69.83a8 8 0 01-7.87 10.17H168.15a8 8 0 01-7.82-10.17C172.32 317.53 210.53 288 256 288z"
+                />
+                <circle
+                  cx="328"
+                  cy="232"
+                  r="24"
+                />
+                <circle
+                  cx="256"
+                  cy="256"
+                  fill="none"
+                  r="208"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                />
+              </svg>
+              <div>
+                Test error label
               </div>
             </div>
           </div>

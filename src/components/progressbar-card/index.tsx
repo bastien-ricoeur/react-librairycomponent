@@ -12,12 +12,15 @@ import ProgressBar from "../progress-bar";
 import ProgressBarSkeletonCard from "./skeleton";
 import { ReactElement } from "react";
 import useStyles from "./progressbar-card.style";
+import ProgressBarErrorCard from './error';
 
 export type ProgressBarCardProps = {
-  completed: number;
-  label: string;
-  total: number;
-  isLoading?: boolean;
+  completed?: number;
+  label?: string;
+  total?: number;
+  loading?: boolean;
+  error?: boolean;
+  errorLabel?: string;
   icon?: IconName;
   primaryColor?: string;
   secondColor?: string;
@@ -25,10 +28,12 @@ export type ProgressBarCardProps = {
 };
 
 const ProgressBarCard = ({
-  completed,
+  completed = 0,
   label,
-  total,
-  isLoading = false,
+  total = 0,
+  loading = false,
+  error = false,
+  errorLabel,
   icon = IconName.pizza,
   primaryColor,
   secondColor,
@@ -86,24 +91,32 @@ const ProgressBarCard = ({
 
   return (
     <div className={classes.root}>
-      {!isLoading && completed <= total ? (
-        <div className={classes.card}>
-          <div className={classes.iconContainer}>{renderIcon(icon)}</div>
-          <div className={classes.cardContent}>
-            <div className={classes.cardLabel}>{label}</div>
-            {size !== "small" && (
-              <div className={classes.cardDescritpion}>
-                {completed} / {total}
+      {!loading && completed <= total ? (
+        <>
+          { !error ? (
+            <div className={classes.card}>
+              <div className={classes.iconContainer}>{renderIcon(icon)}</div>
+              <div className={classes.cardContent}>
+                <div className={classes.cardLabel}>{label}</div>
+                {size !== "small" && (
+                  <div className={classes.cardDescritpion}>
+                    {completed} / {total}
+                  </div>
+                )}
+                <div>
+                  <ProgressBar
+                    completed={Math.floor((completed / total) * 100)}
+                    bgcolor={primaryColor}
+                  />
+                </div>
               </div>
-            )}
-            <div>
-              <ProgressBar
-                completed={Math.floor((completed / total) * 100)}
-                bgcolor={primaryColor}
-              />
             </div>
-          </div>
-        </div>
+          ) : (
+            <ProgressBarErrorCard labelFontSize={labelFontSize}
+              size={size}
+              errorLabel={errorLabel} />
+          )}
+        </>
       ) : (
         <ProgressBarSkeletonCard
           widthHeightIcon={widthHeightIcon}
