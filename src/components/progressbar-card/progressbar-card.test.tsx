@@ -1,8 +1,8 @@
 import ProgressBarCard, { ProgressBarCardProps } from ".";
 import { act, render } from "@testing-library/react";
 
-import React from "react";
 import { IconName } from "../../enums/icon-name";
+import React from "react";
 
 describe("ProgressBarCard", () => {
   let props: ProgressBarCardProps;
@@ -12,7 +12,7 @@ describe("ProgressBarCard", () => {
       completed: 9,
       total: 10,
       label: "Test label",
-      icon: IconName.pizza
+      icon: IconName.pizza,
     };
   });
 
@@ -90,7 +90,7 @@ describe("ProgressBarCard", () => {
     });
 
     it("renders a small progressbar card with pizza icon", async () => {
-      props.size = 'small';
+      props.size = "small";
 
       let container;
       jest.useFakeTimers();
@@ -157,7 +157,7 @@ describe("ProgressBarCard", () => {
     });
 
     it("renders a large progressbar card with pizza icon", async () => {
-      props.size = 'large';
+      props.size = "large";
 
       let container;
       jest.useFakeTimers();
@@ -231,7 +231,7 @@ describe("ProgressBarCard", () => {
     });
 
     it("renders medium progressbar card with linkedin icon", async () => {
-      props.size = 'medium';
+      props.size = "medium";
       props.icon = IconName.linkedin;
 
       let container;
@@ -303,7 +303,7 @@ describe("ProgressBarCard", () => {
     });
 
     it("renders medium progressbar card with document icon", async () => {
-      props.size = 'medium';
+      props.size = "medium";
       props.icon = IconName.document;
 
       let container;
@@ -378,7 +378,7 @@ describe("ProgressBarCard", () => {
     });
 
     it("renders medium progressbar card with checkmark icon", async () => {
-      props.size = 'medium';
+      props.size = "medium";
       props.icon = IconName.checkmark;
 
       let container;
